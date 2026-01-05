@@ -35,7 +35,7 @@ export default function HeaderClient({ items }) {
           {/* LOGO */}
           <Link
             href="/"
-            className={`z-50 ${open ? 'hidden' : ''}`}
+            className={`z-50 ${open ? '' : ''}`}
             aria-label="Home"
           >
             {/* Height fixed to 96px, width auto */}
@@ -110,7 +110,7 @@ export default function HeaderClient({ items }) {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-x-0 top-0 bottom-0 pt-14 bg-secondary text-white md:hidden z-40"
+            className="fixed inset-x-0 top-0 bottom-0 pt-24 bg-black text-white md:hidden z-40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
