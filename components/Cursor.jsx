@@ -3,14 +3,20 @@
 import { useEffect, useRef, useState } from 'react';
 
 export default function Cursor() {
-  const cursorRef = useRef(null);
-  const [clicked, setClicked] = useState(false);
+  const dotRef = useRef(null);
+  const ringRef = useRef(null);
 
-  const mouse = useRef({ x: 0, y: 0 });
-  const pos = useRef({ x: 0, y: 0 });
+  const mouse = useRef({ x: -100, y: -100 });
+  const dot = useRef({ x: -100, y: -100 });
+  const ring = useRef({ x: -100, y: -100 });
+
   const rafRef = useRef(null);
 
-  const EASE = 0.35;
+  const [hovering, setHovering] = useState(false);
+  const [clicked, setClicked] = useState(false);
+
+  const DOT_EASE = 0.55;  // dot follows faster
+  const RING_EASE = 0.18; // ring lags = buttery
 
   useEffect(() => {
     const isFinePointer =
@@ -25,22 +31,11 @@ export default function Cursor() {
       mouse.current.y = e.clientY;
     };
 
-    const setHover = (isHovering) => {
-      const el = cursorRef.current;
-      if (!el) return;
-
-      // bounce / scale on hover
-      el.classList.toggle('cursor-bounce', isHovering);
-      el.classList.toggle('scale-[1.15]', isHovering);
-      el.classList.toggle('opacity-100', isHovering);
-      el.classList.toggle('opacity-90', !isHovering);
-    };
-
     const onOver = (e) => {
       const t = e.target?.closest?.(
         'a, button, [role="button"], input, textarea, select, label, summary, [data-cursor="hover"], [data-cursor="click"]'
       );
-      setHover(!!t);
+      setHovering(!!t);
     };
 
     const onDown = () => {
@@ -54,11 +49,19 @@ export default function Cursor() {
     window.addEventListener('mousedown', onDown, { passive: true });
 
     const animate = () => {
-      pos.current.x += (mouse.current.x - pos.current.x) * EASE;
-      pos.current.y += (mouse.current.y - pos.current.y) * EASE;
+      // dot
+      dot.current.x += (mouse.current.x - dot.current.x) * DOT_EASE;
+      dot.current.y += (mouse.current.y - dot.current.y) * DOT_EASE;
 
-      if (cursorRef.current) {
-        cursorRef.current.style.transform = `translate3d(${pos.current.x}px, ${pos.current.y}px, 0) translate(-50%, -50%)`;
+      // ring
+      ring.current.x += (mouse.current.x - ring.current.x) * RING_EASE;
+      ring.current.y += (mouse.current.y - ring.current.y) * RING_EASE;
+
+      if (dotRef.current) {
+        dotRef.current.style.transform = `translate3d(${dot.current.x}px, ${dot.current.y}px, 0) translate(-50%, -50%)`;
+      }
+      if (ringRef.current) {
+        ringRef.current.style.transform = `translate3d(${ring.current.x}px, ${ring.current.y}px, 0) translate(-50%, -50%)`;
       }
 
       rafRef.current = requestAnimationFrame(animate);
@@ -76,73 +79,60 @@ export default function Cursor() {
 
   return (
     <>
-      {/* SVG CURSOR */}
+      {/* RING */}
       <div
-        ref={cursorRef}
+        ref={ringRef}
         className={[
           'fixed top-0 left-0 pointer-events-none z-[10000]',
-          'w-8 h-8',
-          'opacity-90',
-          'transition-transform duration-150 will-change-transform',
+          'transition-[width,height,opacity,transform,box-shadow] duration-200 ease-out',
         ].join(' ')}
         style={{
-          // Initial transform gets replaced in RAF, but prevents flash at 0,0
-          transform: 'translate3d(-100px, -100px, 0) translate(-50%, -50%)',
+          width: hovering ? 54 : 36,
+          height: hovering ? 54 : 36,
+          borderRadius: 9999,
+          border: `2px solid rgba(104,43,215,${hovering ? 0.65 : 0.35})`,
+          boxShadow: hovering
+            ? '0 0 30px rgba(104,43,215,0.35)'
+            : '0 0 18px rgba(104,43,215,0.18)',
+          opacity: 1,
+          transform: 'translate3d(-100px,-100px,0) translate(-50%, -50%)',
+          backdropFilter: 'blur(2px)',
         }}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          className="w-full h-full"
-          style={{ color: '#682bd7' }}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59"
-          />
-        </svg>
+      />
 
-        {/* CLICK PULSE */}
-        {clicked && (
-          <div className="absolute inset-0 rounded-full border border-[rgba(104,43,215,0.7)] animate-ping" />
-        )}
-      </div>
+      {/* DOT */}
+      <div
+        ref={dotRef}
+        className="fixed top-0 left-0 pointer-events-none z-[10001] transition-transform duration-150 ease-out"
+        style={{
+          width: hovering ? 10 : 8,
+          height: hovering ? 10 : 8,
+          borderRadius: 9999,
+          background: '#682bd7',
+          boxShadow: '0 0 18px rgba(104,43,215,0.55)',
+          transform: `translate3d(-100px,-100px,0) translate(-50%, -50%) scale(${clicked ? 0.75 : 1})`,
+        }}
+      />
 
-      {/* Local CSS for hover bounce (no tail changes) */}
+      {/* CLICK PULSE */}
+      {clicked && (
+        <div
+          className="fixed top-0 left-0 pointer-events-none z-[9999]"
+          style={{
+            width: 70,
+            height: 70,
+            borderRadius: 9999,
+            border: '2px solid rgba(104,43,215,0.55)',
+            transform: `translate3d(${mouse.current.x}px, ${mouse.current.y}px, 0) translate(-50%, -50%)`,
+            animation: 'cursor-pop 300ms ease-out forwards',
+          }}
+        />
+      )}
+
       <style jsx global>{`
-        @media (hover: hover) and (pointer: fine) {
-          /* Optional: remove hand cursor if you want consistent look */
-          a,
-          button,
-          [role='button'],
-          input,
-          textarea,
-          select,
-          label,
-          summary,
-          [data-cursor='hover'],
-          [data-cursor='click'] {
-            cursor: default;
-          }
-        }
-
-        .cursor-bounce {
-          animation: cursor-bounce 520ms cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
-        }
-
-        @keyframes cursor-bounce {
-          0% {
-            transform: translate3d(var(--x, 0px), var(--y, 0px), 0) translate(-50%, -50%) scale(1);
-          }
-          50% {
-            transform: translate3d(var(--x, 0px), var(--y, 0px), 0) translate(-50%, -50%) scale(1.18);
-          }
-          100% {
-            transform: translate3d(var(--x, 0px), var(--y, 0px), 0) translate(-50%, -50%) scale(1);
-          }
+        @keyframes cursor-pop {
+          0% { opacity: 0.8; transform: translate3d(var(--cx, 0px), var(--cy, 0px), 0) translate(-50%, -50%) scale(0.6); }
+          100% { opacity: 0; transform: translate3d(var(--cx, 0px), var(--cy, 0px), 0) translate(-50%, -50%) scale(1.2); }
         }
       `}</style>
     </>

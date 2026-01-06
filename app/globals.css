@@ -28,6 +28,17 @@ body {
     background: var(--black);
 }
 
+@media (hover: hover) and (pointer: fine) {
+  html, body {
+    cursor: none;
+  }
+
+  a, button, [role="button"], input, textarea, select, label, summary,
+  [data-cursor="hover"], [data-cursor="click"] {
+    cursor: none;
+  }
+}
+
 
 .container {
   @apply px-4 w-full max-w-[1312px] mx-auto;

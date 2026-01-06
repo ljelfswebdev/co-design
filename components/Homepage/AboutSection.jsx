@@ -26,7 +26,7 @@ export default function AboutSection({ data }) {
   const typingDuration = letters.length * STAGGER + TITLE_DELAY;
 
   return (
-    <section ref={ref} className="relative py-20 lg:py-28">
+    <section ref={ref} className="relative py-20 lg:py-28 overflow-x-hidden">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full blur-3xl opacity-20 bg-primary" />
         <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full blur-3xl opacity-20 bg-primary" />

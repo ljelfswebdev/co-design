@@ -51,10 +51,8 @@ export default function CursorTrail() {
         <div
           key={i}
           id={`cursor-dot-${i}`}
-          className="fixed top-0 left-0 w-3 h-3 rounded-full bg-primary pointer-events-none z-[9999]"
-          style={{
-            opacity: 1 - i / DOT_COUNT,
-          }}
+          className="fixed top-0 left-0 w-2 h-2 rounded-full bg-primary pointer-events-none z-[9999]"
+          style={{ opacity: 0.45 - i / DOT_COUNT * 0.45 }}
         />
       ))}
     </>
