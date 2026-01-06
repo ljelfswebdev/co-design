@@ -4,10 +4,10 @@ import { dbConnect } from '@helpers/db';
 import Post from '@/models/Post';
 import { POST_TYPE_TEMPLATES } from '@/templates/postTypes';
 
-import Banner from '@/components/Banner';
 import Image from '@/helpers/Image';
 import NewsSidebar from '@/components/News/Sidebar';
 import NewsBlocks from '@/components/News/NewsBlocks';
+import '@/styles/pages/news.css';
 
 /* ------------------------------------
    Helper: get ALL news categories
@@ -77,16 +77,14 @@ export default async function NewsPostPage({ params }) {
 
   return (
     <>
-      <Banner title="Brewood News" />
-
-      <section className="py-12">
+      <section className="py-20">
         <div className="container">
           <div className="gap-8 flex flex-col-reverse lg:flex-row">
             {/* MAIN CONTENT */}
             <div className="grow max-w-4xl space-y-8">
               {/* TITLE */}
               <div className="space-y-2">
-                <h1 className="h2">{title}</h1>
+                <h1 className="h2 text-white">{title}</h1>
                 {formattedDate && (
                   <p className="text-sm text-gray-500">{formattedDate}</p>
                 )}
@@ -98,7 +96,7 @@ export default async function NewsPostPage({ params }) {
                   {activeCategories.map((cat) => (
                     <span
                       key={cat}
-                      className="button button--secondary text-xs"
+                      className="button button--primary"
                     >
                       {cat}
                     </span>
@@ -121,7 +119,7 @@ export default async function NewsPostPage({ params }) {
 
               {/* INTRO TEXT */}
               {intro.introText && (
-                <p className="text-lg text-gray-700">
+                <p className="text-lg">
                   {intro.introText}
                 </p>
               )}

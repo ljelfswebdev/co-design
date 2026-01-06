@@ -6,6 +6,9 @@ import Cursor from '@/components/Cursor';
 import CursorTrail from '@/components/CursorTrail';
 import ScrollProgress from '@/components/ScrollProgress';
 
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 
 const ToasterClient = dynamic(
   () => import('react-hot-toast').then(m => m.Toaster),

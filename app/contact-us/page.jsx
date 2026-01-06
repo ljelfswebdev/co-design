@@ -4,12 +4,8 @@ import { dbConnect } from '@helpers/db';
 import Page from '@/models/Page';
 import Form from '@/models/Form';
 import Setting from '@/models/Settings';
-import Banner from '@/components/Banner';
 
-const UspsServer = dynamic(
-  () => import('@/components/Usps/UspsServer'),
-  { ssr: true }
-);
+
 
 // lazy-load the whole content section (form + contact details)
 const ContactSection = dynamic(
@@ -35,12 +31,9 @@ export default async function ContactUsPage() {
   return (
     <main>
 
-      <Banner title={title} />
-
-      <UspsServer />
-
       {/* Rest of the page (lazy-loaded client chunk) */}
       <ContactSection
+        page={page ? JSON.parse(JSON.stringify(page)) : null}
         form={form ? JSON.parse(JSON.stringify(form)) : null}
         contact={contact}
         socials={socials}

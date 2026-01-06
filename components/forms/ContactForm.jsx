@@ -131,6 +131,7 @@ export default function ContactForm({ form }) {
                   <Select
                     options={options}
                     value={selectedOption}
+                    
                     onChange={(option) =>
                       updateField(label, option ? option.value : '')
                     }

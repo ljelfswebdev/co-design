@@ -3,6 +3,7 @@ import { dbConnect } from '@helpers/db';
 import Page from '@/models/Page';
 import Post from '@/models/Post';
 import HeroSection from '@/components/Homepage/HeroSection';
+import '@/styles/pages/homepage.css';
 
 // New sections (lazy where it makes sense)
 const TrustSignalsSection = dynamic(() => import('@/components/Homepage/TrustSignals'), { ssr: false });

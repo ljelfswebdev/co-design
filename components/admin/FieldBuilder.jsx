@@ -3,6 +3,7 @@
 
 import CloudinaryUpload from '@/components/admin/CloudinaryUpload';
 import RichTextEditor from '@/components/admin/RichTextEditor';
+import Select from 'react-select';
 
 import {
   DndContext,
@@ -362,13 +363,115 @@ export default function FieldBuilder({
                                     </div>
                                   </div>
 
+                          
                                   {/* Inner fields */}
                                   {(field.of || []).map((sub) => {
-                                    const subVal = item?.[sub.name] ?? '';
+                                    const blockType = item?.blockType || 'richText';
+
+                                    // ✅ show ONLY the relevant field based on blockType
+                                    if (sub.name === 'content' && blockType !== 'richText') return null;
+                                    if (sub.name === 'gallery' && blockType !== 'imageGallery') return null;
+
+                                    const subVal = item?.[sub.name] ?? (sub.type === 'repeater' ? [] : '');
                                     const updateSub = (value) =>
-                                      updateRepeaterItem(section.key, field.name, idx, {
-                                        [sub.name]: value,
-                                      });
+                                      updateRepeaterItem(section.key, field.name, idx, { [sub.name]: value });
+
+                                    // ✅ SELECT (Block Type)
+                                    // ✅ SELECT (react-select)
+                                    if (sub.type === 'select') {
+                                      const options = (sub.options || []).map((opt) =>
+                                        typeof opt === 'string' ? { label: opt, value: opt } : opt
+                                      );
+
+                                      const selected = options.find((o) => o.value === (subVal || '')) || null;
+
+                                      return (
+                                        <div key={sub.name}>
+                                          <label className="label">{sub.label}</label>
+
+                                          <Select
+                                            instanceId={`${section.key}-${field.name}-${idx}-${sub.name}`}
+                                           
+                                            options={options}
+                                            value={selected}
+                                            onChange={(opt) => updateSub(opt?.value || '')}  // ✅ store string
+                                            isSearchable={false}
+                                          />
+                                        </div>
+                                      );
+                                    }
+
+                                    // ✅ NESTED REPEATER (Gallery Images)
+                                    if (sub.type === 'repeater') {
+                                      const subItems = Array.isArray(subVal) ? subVal : [];
+
+                                      const addSubItem = () => {
+                                        const next = [...subItems, sub.defaultItem || {}];
+                                        updateSub(next);
+                                      };
+
+                                      const updateSubItem = (subIdx, patch) => {
+                                        const next = [...subItems];
+                                        next[subIdx] = { ...(next[subIdx] || {}), ...patch };
+                                        updateSub(next);
+                                      };
+
+                                      const removeSubItem = (subIdx) => {
+                                        const next = [...subItems];
+                                        next.splice(subIdx, 1);
+                                        updateSub(next);
+                                      };
+
+                                      return (
+                                        <div key={sub.name} className="space-y-2">
+                                          <div className="flex items-center justify-between">
+                                            <label className="label mb-0">{sub.label}</label>
+                                            <button
+                                              type="button"
+                                              className="button button--secondary text-xs"
+                                              onClick={addSubItem}
+                                            >
+                                              + Add
+                                            </button>
+                                          </div>
+
+                                          <div className="space-y-2">
+                                            {subItems.map((subItem, subIdx) => (
+                                              <div key={subIdx} className="border rounded-xl p-3 bg-white space-y-2">
+                                                <div className="flex items-center justify-between">
+                                                  <div className="text-xs font-semibold">Item {subIdx + 1}</div>
+                                                  <button
+                                                    type="button"
+                                                    className="button button--tertiary text-xs"
+                                                    onClick={() => removeSubItem(subIdx)}
+                                                  >
+                                                    Remove
+                                                  </button>
+                                                </div>
+
+                                                {(sub.of || []).map((subField) => {
+                                                  const v = subItem?.[subField.name] ?? '';
+                                                  if (subField.type === 'image') {
+                                                    return (
+                                                      <div key={subField.name}>
+                                                        <label className="label">{subField.label}</label>
+                                                        <CloudinaryUpload
+                                                          value={v}
+                                                          onChange={(url) =>
+                                                            updateSubItem(subIdx, { [subField.name]: url })
+                                                          }
+                                                        />
+                                                      </div>
+                                                    );
+                                                  }
+                                                  return null;
+                                                })}
+                                              </div>
+                                            ))}
+                                          </div>
+                                        </div>
+                                      );
+                                    }
 
                                     if (sub.type === 'text') {
                                       return (
@@ -387,10 +490,7 @@ export default function FieldBuilder({
                                       return (
                                         <div key={sub.name}>
                                           <label className="label">{sub.label}</label>
-                                          <CloudinaryUpload
-                                            value={subVal}
-                                            onChange={(url) => updateSub(url)}
-                                          />
+                                          <CloudinaryUpload value={subVal} onChange={(url) => updateSub(url)} />
                                         </div>
                                       );
                                     }
@@ -413,10 +513,7 @@ export default function FieldBuilder({
                                       return (
                                         <div key={sub.name}>
                                           <label className="label">{sub.label}</label>
-                                          <RichTextEditor
-                                            value={subVal}
-                                            onChange={(html) => updateSub(html)}
-                                          />
+                                          <RichTextEditor value={subVal} onChange={(html) => updateSub(html)} />
                                         </div>
                                       );
                                     }

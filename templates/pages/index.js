@@ -1,6 +1,7 @@
 // templates/pages/index.js
 import { HOMEPAGE_TEMPLATE } from './homepage';
 import { ABOUT_TEMPLATE } from './about';
+import { CONTACT_TEMPLATE } from './contact';
 
 export const PAGE_TEMPLATES = {
   homepage: {
@@ -14,5 +15,11 @@ export const PAGE_TEMPLATES = {
     key: 'about',
     label: 'About Page',
     sections: ABOUT_TEMPLATE,
+  },
+
+    contact: {
+    key: 'contact',
+    label: 'Contact Page',
+    sections: CONTACT_TEMPLATE,
   },
 };

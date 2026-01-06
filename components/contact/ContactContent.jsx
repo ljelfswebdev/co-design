@@ -1,51 +1,43 @@
-// components/forms/ContactSection.jsx
 'use client';
 
 import SocialLinksClient from '@/components/socials/SocialLinksClient';
 import ContactForm from '@/components/forms/ContactForm';
+import ContactCards from './Cards';
 
-
-
-export default function ContactSection({ form, contact, socials }) {
+export default function ContactSection({ page, form, contact, socials }) {
   const phone = contact?.phone || '';
   const email = contact?.email || '';
   const address = contact?.address || '';
 
-  return (
-    <>
+  const pageTitle = page?.templateData?.section1?.title || '';
+  const pageText = page?.templateData?.section1?.text || '';
 
-    <section className="py-12 border-t-2 border-solid border-grey">
+  return (
+    <section className="py-20 border-t-2 border-solid border-grey">
       <div className="container">
         <div className="flex flex-col md:flex-row gap-10">
-          {/* LEFT: contact details + socials */}
-          <div className="flex flex-col w-full md:w-1/2 space-y-4">
-            {phone && (
-              <div className="text-sm">
-                <div className="font-semibold">Telephone</div>
-                <a href={`tel:${phone}`} className="text-blue-600 hover:underline">
-                  {phone}
-                </a>
+          {/* LEFT: page text + contact details + socials */}
+          <div className="flex flex-col w-full md:w-1/2 space-y-6">
+            {(pageTitle || pageText) && (
+              <div className="space-y-3">
+                {pageTitle && (
+                  <h2 className="text-2xl font-semibold text-white">
+                    {pageTitle}
+                  </h2>
+                )}
+
+                {pageText && (
+                  <div
+                    className="text-white/80 text-sm sm:text-base leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: pageText }}
+                  />
+                )}
               </div>
             )}
 
-            {email && (
-              <div className="text-sm">
-                <div className="font-semibold">Email</div>
-                <a href={`mailto:${email}`} className="text-blue-600 hover:underline">
-                  {email}
-                </a>
-              </div>
-            )}
+            <ContactCards phone={phone} email={email} address={address} />
 
-            {address && (
-              <div className="text-sm">
-                <div className="font-semibold">Address</div>
-                <p>{address}</p>
-              </div>
-            )}
-
-            {/* socials use existing client component */}
-            <SocialLinksClient className="mt-6" size={24} showLabels={false} />
+            <SocialLinksClient className="mt-2" size={24} showLabels={false} />
           </div>
 
           {/* RIGHT: form */}
@@ -56,7 +48,8 @@ export default function ContactSection({ form, contact, socials }) {
               <div className="card">
                 <h2 className="text-lg font-semibold mb-2">Form not configured</h2>
                 <p className="text-sm text-gray-600">
-                  No form found with key <code>contact</code>. Go to <code>/admin/forms</code> and create one.
+                  No form found with key <code>contact</code>. Go to{' '}
+                  <code>/admin/forms</code> and create one.
                 </p>
               </div>
             )}
@@ -64,7 +57,5 @@ export default function ContactSection({ form, contact, socials }) {
         </div>
       </div>
     </section>
-    </>
-
   );
 }

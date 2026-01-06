@@ -112,15 +112,18 @@ export default function NewsSidebar({
             return (
               <label
                 key={label}
-                className="flex items-center gap-2 cursor-pointer"
+                className="flex items-center gap-2 cursor-pointer relative"
               >
                 <input
                   type="checkbox"
-                  className="h-4 w-4"
+                  className="hidden peer"
                   checked={checked}
                   onChange={() => toggleCategory(label)}
                 />
-                <span>{label}</span>
+                <span className="h-4 min-h-4 w-4 min-w-4 bg-white rounded-full"></span>
+                <span className="h-3 min-h-3 w-3 min-w-3 bg-primary rounded-full top-1 left-[2px] z-[1] absolute opacity-0 peer-checked:opacity-100"></span>
+
+                <span className="peer-checked:text-primary">{label}</span>
               </label>
             );
           })}

@@ -40,6 +40,7 @@ select {
   font-family: inherit;
   font-size: 16px;
   padding: 8px 16px;
+  background: transparent;
 }
 
 /* Sizes */
@@ -125,7 +126,8 @@ select.form-error {
   border: 2px solid var(--grey) !important;
   border-radius: 5px !important;
   box-shadow: none !important;
-  color: #000000 !important;
+  background-color: transparent !important;
+  color: #ffffff70
 }
 
 .react-select__control:hover,
@@ -137,12 +139,12 @@ select.form-error {
 
 /* Selected value (single select) */
 .react-select__single-value {
-  color: #000 !important;
+  color: #ffffff70 !important;
 }
 
 /* Placeholder text */
 .react-select__placeholder {
-  color: #000 !important;
+  color: #ffffff70 !important;
 }
 
 /* Dropdown menu container */
@@ -152,10 +154,10 @@ select.form-error {
 
 /* Each option */
 .react-select__option {
-  color: #000 !important;
+
 }
 
 /* Multi-select chips (if you ever use them) */
 .react-select__multi-value__label {
-  color: #000 !important;
+
 }
