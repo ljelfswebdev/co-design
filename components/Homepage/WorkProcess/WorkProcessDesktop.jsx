@@ -106,6 +106,10 @@ export default function WorkProcessDesktop({
       className="hidden md:block relative"
       style={{ height: `${sectionHeightVh}vh` }}
     >
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -top-24 right-10 h-72 w-72 rounded-full blur-3xl opacity-10 bg-primary" />
+        <div className="absolute -bottom-24 left-10 h-72 w-72 rounded-full blur-3xl opacity-10 bg-primary" />
+      </div>
     <div className="container pt-10">
         {(data?.title || data?.text) && (
           <div className="space-y-4">
