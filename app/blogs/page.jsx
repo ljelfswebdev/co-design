@@ -14,7 +14,7 @@ export default async function NewsPage() {
   await dbConnect();
 
   // ✅ Fetch the CMS page with slug "news" (for title + intro text)
-  const page = await Page.findOne({ slug: 'news' }).lean();
+  const page = await Page.findOne({ slug: 'blogs' }).lean();
 
   // ✅ Fetch published news posts
   const posts = await Post.find({ postTypeKey: 'news', status: 'published' })

@@ -2,6 +2,7 @@
 
 import { useMemo, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import Link from 'next/link';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
@@ -125,6 +126,10 @@ export default function NewsSliderClient({ posts }) {
             <div className="news-pagination flex gap-2" />
           </motion.div>
         </motion.div>
+
+        <Link href="/blogs" className="button button--primary mx-auto w-fit flex">
+            View All Blogs
+          </Link>
       </div>
     </section>
   );

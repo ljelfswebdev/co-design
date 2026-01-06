@@ -17,13 +17,13 @@ export default function NewsCard({ post }) {
   return (
     <article className="border border-white/10 border-solid overflow-hidden rounded-3xl flex flex-col h-full">
       <Link
-        href={`/news/${post.slug}`}
+        href={`/blogs/${post.slug}`}
         className="block mb-3 relative w-full aspect-[4/3] overflow-hidden"
       >
         {introImage ? (
           <Image
             src={introImage}
-            alt={post.title || 'News image'}
+            alt={post.title || 'Blog image'}
             fill
             className="object-cover"
           />
@@ -34,7 +34,7 @@ export default function NewsCard({ post }) {
 
       <div className="flex flex-col flex-1 p-4">
         <h3 className="text-lg font-semibold mb-2">
-          <Link href={`/news/${post.slug}`} className=" text-white hover:text-primary">
+          <Link href={`/blogs/${post.slug}`} className=" text-white hover:text-primary">
             {post.title}
           </Link>
         </h3>
@@ -42,7 +42,7 @@ export default function NewsCard({ post }) {
         {snippet && <p className="text-sm flex-1">{snippet}</p>}
 
         <div className="mt-4">
-          <Link href={`/news/${post.slug}`} className="button button--primary w-full">
+          <Link href={`/blogs/${post.slug}`} className="button button--primary w-full">
             Read more
           </Link>
         </div>
