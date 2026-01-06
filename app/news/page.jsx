@@ -2,26 +2,27 @@
 import dynamic from 'next/dynamic';
 import { dbConnect } from '@helpers/db';
 import Post from '@/models/Post';
+import Page from '@/models/Page';
 import Loading from '@/components/Loading';
 
-const NewsArchive = dynamic(
-  () => import('@/components/News/NewsArchive'),
-  {
-    ssr: false,          // client-side for filters & pagination
-    loading: () => <Loading />,
-  }
-);
-
+const NewsArchive = dynamic(() => import('@/components/News/NewsArchive'), {
+  ssr: false,
+  loading: () => <Loading />,
+});
 
 export default async function NewsPage() {
   await dbConnect();
 
+  // ✅ Fetch the CMS page with slug "news" (for title + intro text)
+  const page = await Page.findOne({ slug: 'news' }).lean();
+
+  // ✅ Fetch published news posts
   const posts = await Post.find({ postTypeKey: 'news', status: 'published' })
-    .sort({ publishedAt: -1 })
+    .sort({ publishedAt: -1, createdAt: -1 })
     .lean();
 
-  // Strip mongoose stuff
   const safePosts = JSON.parse(JSON.stringify(posts || []));
+  const safePage = page ? JSON.parse(JSON.stringify(page)) : null;
 
-  return <NewsArchive posts={safePosts} />;
+  return <NewsArchive posts={safePosts} page={safePage} />;
 }

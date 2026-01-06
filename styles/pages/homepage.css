@@ -58,3 +58,23 @@
     bg-primary
     ;
 }
+
+.testimonials-pagination .swiper-pagination-bullet {
+    background: white;
+    height: 8px;
+    width: 8px;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    margin:0 !important;
+    opacity: 1 !important;
+
+}
+.testimonials-pagination .swiper-pagination-bullet-active {
+
+    width: 16px;
+    opacity: 1;
+
+    @apply
+    bg-primary
+    ;
+}

@@ -93,7 +93,7 @@ export default function NewsSidebar({
     <aside className="space-y-8">
       {/* Search */}
       <div className="rounded-primary border-2 border-solid border-primary p-8">
-        <h3 className="text-sm font-semibold mb-3 text-white">Search news</h3>
+        <h3 className="text-sm font-semibold mb-3 text-white">Search blogs</h3>
         <input
           type="text"
           className="input w-full"

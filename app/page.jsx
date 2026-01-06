@@ -15,6 +15,7 @@ const BannerCTA = dynamic(() => import('@/components/Homepage/BannerCTA'), { ssr
 // const UspsServer = dynamic(() => import('@/components/Usps/UspsServer'), { ssr: true });
 // const ServicesHomepage = dynamic(() => import('@/components/Homepage/Services'), { ssr: false });
 import NewsSlider from '@/components/Homepage/NewsSlider';
+import Testimonials from '@/components/Homepage/Testimonials';
 
 export default async function HomePage() {
   await dbConnect();
@@ -65,6 +66,8 @@ export default async function HomePage() {
       <WorkProcess data={section4} />
 
       <NewsSlider />
+
+      <Testimonials/>
 
       {/* 10. Banner CTA */}
       <BannerCTA data={section5} />

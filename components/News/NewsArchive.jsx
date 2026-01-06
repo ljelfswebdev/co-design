@@ -1,13 +1,13 @@
 // components/News/NewsArchive.jsx
 'use client';
 
-import { useMemo, useState, useEffect } from 'react';
+import { useMemo, useRef, useState, useEffect } from 'react';
 import Select from 'react-select';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useInView } from 'framer-motion';
 import NewsSidebar from './Sidebar';
 import { POST_TYPE_TEMPLATES } from '@/templates/postTypes';
-import Banner from '@/components/Banner';
 import NewsCard from '@/components/News/Card';
+
 import { useSearchParams } from 'next/navigation';
 
 const PAGE_SIZE = 6;
@@ -47,15 +47,29 @@ const FALLBACK_LABEL_TO_FIELD = {
   Players: 'isPlayers',
 };
 
-export default function NewsArchive({ posts }) {
+export default function NewsArchive({ posts, page }) {
   const searchParams = useSearchParams();
 
   const [filters, setFilters] = useState({ search: '', categories: [] });
   const [currentPage, setCurrentPage] = useState(1);
 
-  // ✅ Animated filtering state (stages)
+  // ✅ Animated filtering state
   const [displayed, setDisplayed] = useState(posts || []);
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  // ✅ Page title/text from CMS (slug: news)
+  const pageTitle = page?.templateData?.section1?.title || page?.title || 'Blog';
+  const pageText = page?.templateData?.section1?.text || '';
+
+  // ✅ Title typewriter in-view
+  const headerRef = useRef(null);
+  const headerInView = useInView(headerRef, { amount: 0.6, once: true });
+
+  const letters = useMemo(() => (pageTitle ? pageTitle.split('') : []), [pageTitle]);
+
+  const STAGGER = 0.035;
+  const TITLE_DELAY = 0.12;
+  const typingDuration = letters.length * STAGGER + TITLE_DELAY;
 
   // reset page when filters change
   useEffect(() => {
@@ -117,14 +131,14 @@ export default function NewsArchive({ posts }) {
     });
   }, [posts, filters, CATEGORY_FIELDS]);
 
-  // ✅ slow down: fade OUT first, then swap list, then fade IN
+  // ✅ fade OUT first, then swap list, then fade IN
   useEffect(() => {
     setIsTransitioning(true);
 
     const t = setTimeout(() => {
       setDisplayed(filtered);
       setIsTransitioning(false);
-    }, 260); // 👈 controls how long you see fade-out before swap
+    }, 260);
 
     return () => clearTimeout(t);
   }, [filtered]);
@@ -148,95 +162,157 @@ export default function NewsArchive({ posts }) {
   }
 
   return (
-    <>
-      <Banner title="Blog" />
-
-      <section className="py-12">
-        <div className="container">
-          <div className="gap-8 flex flex-col-reverse lg:flex-row">
-            {/* MAIN LIST */}
-            <div className="space-y-6 grow">
-              {paged.length === 0 && !isTransitioning && (
-                <div className="card">
-                  <p className="text-sm text-gray-600">
-                    No news posts found. Try changing the search or filters.
-                  </p>
-                </div>
-              )}
-
-              {/* ✅ crossfade the whole grid (simple + smooth) */}
-              <motion.div
-                animate={{ opacity: isTransitioning ? 0 : 1 }}
-                transition={{ duration: 0.35, ease: 'easeInOut' }}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+    <section className="py-12">
+      <div className="container">
+        {/* ✅ PAGE HEADER (typewrite title, then text fade) */}
+        <div ref={headerRef} className="mb-10 space-y-3">
+          <motion.h1
+            className="h2 text-white"
+            initial="hidden"
+            animate={headerInView ? 'show' : 'hidden'}
+            variants={{
+              hidden: {},
+              show: {
+                transition: {
+                  staggerChildren: STAGGER,
+                  delayChildren: TITLE_DELAY,
+                },
+              },
+            }}
+            aria-label={pageTitle}
+          >
+            {letters.map((ch, i) => (
+              <motion.span
+                key={`${ch}-${i}`}
+                className="inline-block"
+                variants={{
+                  hidden: { opacity: 0, y: 10, filter: 'blur(6px)' },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    filter: 'blur(0px)',
+                    transition: { duration: 0.22, ease: 'easeOut' },
+                  },
+                }}
               >
-                <AnimatePresence mode="popLayout">
-                  {paged.map((post) => (
-                    <motion.div
-                      key={post._id}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.35, ease: 'easeInOut' }}
-                    >
-                      <NewsCard post={post} />
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
-              </motion.div>
+                {ch === ' ' ? '\u00A0' : ch}
+              </motion.span>
+            ))}
 
-              {/* PAGINATION */}
-              {displayed.length > PAGE_SIZE && (
-                <div className="mt-6 flex flex-col lg:flex-row items-center justify-between gap-4">
-                  <div className="flex items-center gap-2 text-sm">
-                    <button
-                      type="button"
-                      className="button button--primary"
-                      onClick={() => goToPage(clampedPage - 1)}
-                      disabled={clampedPage <= 1 || isTransitioning}
-                    >
-                      Prev
-                    </button>
-                    <button
-                      type="button"
-                      className="button button--primary"
-                      onClick={() => goToPage(clampedPage + 1)}
-                      disabled={clampedPage >= totalPages || isTransitioning}
-                    >
-                      Next
-                    </button>
-                    <span className="text-xs text-gray-500 ml-2">
-                      Page {clampedPage} of {totalPages}
-                    </span>
-                  </div>
+            {/* ✅ blink cursor then disappear */}
+            <motion.span
+              className="inline-block ml-1 align-baseline"
+              initial={{ opacity: 0 }}
+              animate={headerInView ? { opacity: [0, 1, 0, 1, 0, 0] } : { opacity: 0 }}
+              transition={{
+                duration: 1.2,
+                ease: 'easeInOut',
+                delay: typingDuration,
+                times: [0, 0.2, 0.4, 0.6, 0.8, 1],
+              }}
+            >
+              |
+            </motion.span>
+          </motion.h1>
 
-                  <div className="w-full md:w-56">
-                    <Select
-                      instanceId="news-page-select"
-                      classNamePrefix="react-select"
-                      options={pageOptions}
-                      value={pageOptions.find((o) => o.value === clampedPage)}
-                      onChange={(opt) => goToPage(opt?.value || 1)}
-                      isSearchable={false}
-                      isDisabled={isTransitioning}
-                    />
-                  </div>
+          {pageText ? (
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={headerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
+              transition={{
+                duration: 0.7,
+                ease: [0.22, 1, 0.36, 1],
+                delay: Math.max(0.25, typingDuration * 0.7),
+              }}
+              className="text-white/80 text-sm sm:text-base leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: pageText }}
+            />
+          ) : null}
+        </div>
+
+        <div className="gap-8 flex flex-col-reverse lg:flex-row">
+          {/* MAIN LIST */}
+          <div className="space-y-6 grow">
+            {paged.length === 0 && !isTransitioning && (
+              <div className="card">
+                <p className="text-sm text-gray-600">
+                  No news posts found. Try changing the search or filters.
+                </p>
+              </div>
+            )}
+
+            {/* ✅ crossfade the whole grid */}
+            <motion.div
+              animate={{ opacity: isTransitioning ? 0 : 1 }}
+              transition={{ duration: 0.35, ease: 'easeInOut' }}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+            >
+              <AnimatePresence mode="popLayout">
+                {paged.map((post) => (
+                  <motion.div
+                    key={post._id}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.35, ease: 'easeInOut' }}
+                  >
+                    <NewsCard post={post} />
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+
+            {/* PAGINATION */}
+            {displayed.length > PAGE_SIZE && (
+              <div className="mt-6 flex flex-col lg:flex-row items-center justify-between gap-4">
+                <div className="flex items-center gap-2 text-sm">
+                  <button
+                    type="button"
+                    className="button button--primary"
+                    onClick={() => goToPage(clampedPage - 1)}
+                    disabled={clampedPage <= 1 || isTransitioning}
+                  >
+                    Prev
+                  </button>
+                  <button
+                    type="button"
+                    className="button button--primary"
+                    onClick={() => goToPage(clampedPage + 1)}
+                    disabled={clampedPage >= totalPages || isTransitioning}
+                  >
+                    Next
+                  </button>
+                  <span className="text-xs text-gray-500 ml-2">
+                    Page {clampedPage} of {totalPages}
+                  </span>
                 </div>
-              )}
-            </div>
 
-            {/* SIDEBAR */}
-            <div className="lg:min-w-[400px]">
-              <NewsSidebar
-                categories={sidebarCategories}
-                onFilterChange={setFilters}
-                initialFilters={filters}
-                debounceMs={750} // 👈 slower typing debounce if you want
-              />
-            </div>
+                <div className="w-full md:w-56">
+                  <Select
+                    instanceId="news-page-select"
+                    classNamePrefix="react-select"
+                    options={pageOptions}
+                    value={pageOptions.find((o) => o.value === clampedPage)}
+                    onChange={(opt) => goToPage(opt?.value || 1)}
+                    isSearchable={false}
+                    isDisabled={isTransitioning}
+                  />
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* SIDEBAR */}
+          <div className="lg:min-w-[400px]">
+            <NewsSidebar
+              categories={sidebarCategories}
+              onFilterChange={setFilters}
+              initialFilters={filters}
+              debounceMs={750}
+            />
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
