@@ -128,7 +128,7 @@ export default function NewsArchive({ posts }) {
 
   return (
     <>
-      <Banner title="Brewood News" />
+      <Banner title="Blog" />
 
       <section className="py-12">
         <div className="container">
@@ -155,7 +155,7 @@ export default function NewsArchive({ posts }) {
                   <div className="flex items-center gap-2 text-sm">
                     <button
                       type="button"
-                      className="button button--secondary"
+                      className="button button--primary"
                       onClick={() => goToPage(clampedPage - 1)}
                       disabled={clampedPage <= 1}
                     >
@@ -163,7 +163,7 @@ export default function NewsArchive({ posts }) {
                     </button>
                     <button
                       type="button"
-                      className="button button--secondary"
+                      className="button button--primary"
                       onClick={() => goToPage(clampedPage + 1)}
                       disabled={clampedPage >= totalPages}
                     >
@@ -177,6 +177,7 @@ export default function NewsArchive({ posts }) {
                   <div className="w-full md:w-56">
                     <Select
                       instanceId="news-page-select"
+                      classNamePrefix="react-select"
                       options={pageOptions}
                       value={pageOptions.find((o) => o.value === clampedPage)}
                       onChange={(opt) => goToPage(opt?.value || 1)}

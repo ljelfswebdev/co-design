@@ -1,97 +1,42 @@
 [
   {
-    "title": "Kirby Maintenance Tips for Busy Households",
-    "slug": "kirby-maintenance-tips-for-busy-households",
+    "title": "Design Tokens: The Fastest Way to Stop UI Drift",
+    "slug": "design-tokens-the-fastest-way-to-stop-ui-drift",
     "postTypeKey": "news",
     "templateKey": "news",
     "status": "published",
-    "publishDate": "2025-11-19T19:28:57.644481Z",
+    "publishDate": "2026-01-05T10:12:33.000Z",
     "templateData": {
       "banner": {
-        "bannerTitle": "Kirby Maintenance Tips for Busy Households",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_0.jpg"
+        "bannerTitle": "Design Tokens: The Fastest Way to Stop UI Drift",
+        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg"
       },
       "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_0.jpg"
+        "introText": "A quick refresher on why teams drift into 14 shades of grey and 9 button paddings — and how tokens fix it.",
+        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg"
       },
       "main": {
-        "heading": "Kirby Maintenance Tips for Busy Households",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_0.jpg",
-        "categories": [
-          "kirby",
-          "spares"
-        ],
-        "contentBlocks": [
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "Dyson vs Traditional Vacuums: What You Need to Know",
-    "slug": "dyson-vs-traditional-vacuums:-what-you-need-to-know",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-11-18T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "Dyson vs Traditional Vacuums: What You Need to Know",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_1.jpg"
+        "heading": "Tokens first, overrides last",
+        "excerpt": "We swapped ad-hoc CSS tweaks for semantic tokens and immediately reduced UI inconsistencies across pages.",
+        "body": "<p>Tokens work best when they’re <strong>semantic</strong>, not purely visual. Instead of <code>gray-700</code>, think <code>text.primary</code>.</p><h2>What we shipped</h2><ul><li>Typography + spacing scale</li><li>Color roles (surface, text, border)</li><li>Component states (hover, focus, disabled)</li></ul><p>Result: fewer one-offs and easier reviews.</p>",
+        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png",
+        "isDevelopment": true,
+        "isDesign": true,
+        "isSEO": false,
+        "isPerformance": false,
+        "isSecurity": false
       },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_1.jpg"
-      },
-      "main": {
-        "heading": "Dyson vs Traditional Vacuums: What You Need to Know",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_1.jpg",
-        "categories": [
-          "general",
-          "service",
-          "dyson",
-          "kirby"
-        ],
-        "contentBlocks": [
+      "blocks": {
+        "blocks": [
           {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg"
-            ]
+            "blockType": "richText",
+            "content": "<h3>Token naming tip</h3><p>Use roles like <code>surface.1</code> and <code>text.muted</code>. It keeps design and code aligned when colors change later.</p>"
           },
           {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_3.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_4.jpg"
-            ]
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_2.jpg"
+            "blockType": "imageGallery",
+            "gallery": [
+              { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg" },
+              { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg" }
             ]
           }
         ]
@@ -99,46 +44,77 @@
     }
   },
   {
-    "title": "How Often Should You Service Your Vacuum Cleaner?",
-    "slug": "how-often-should-you-service-your-vacuum-cleaner",
+    "title": "SEO Basics That Still Move the Needle in 2026",
+    "slug": "seo-basics-that-still-move-the-needle-in-2026",
     "postTypeKey": "news",
     "templateKey": "news",
     "status": "published",
-    "publishDate": "2025-11-17T19:28:57.644481Z",
+    "publishDate": "2026-01-04T14:02:10.000Z",
     "templateData": {
       "banner": {
-        "bannerTitle": "How Often Should You Service Your Vacuum Cleaner?",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_2.jpg"
+        "bannerTitle": "SEO Basics That Still Move the Needle in 2026",
+        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg"
       },
       "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_2.jpg"
+        "introText": "No gimmicks: titles, headings, internal links, and clean metadata still win.",
+        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png"
       },
       "main": {
-        "heading": "How Often Should You Service Your Vacuum Cleaner?",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_2.jpg",
-        "categories": [
-          "service",
-          "general",
-          "spares"
-        ],
-        "contentBlocks": [
+        "heading": "Clean structure beats clever hacks",
+        "excerpt": "We tightened titles, removed duplicate H1s, and fixed canonical tags across key routes.",
+        "body": "<p>We focused on a few fundamentals:</p><ul><li>Unique titles + descriptions per page</li><li>One clear H1</li><li>Internal links that match intent</li></ul><p>Bonus: better previews via Open Graph tags.</p>",
+        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg",
+        "isDevelopment": false,
+        "isDesign": false,
+        "isSEO": true,
+        "isPerformance": false,
+        "isSecurity": false
+      },
+      "blocks": {
+        "blocks": [
           {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
+            "blockType": "richText",
+            "content": "<h3>Mini checklist</h3><ul><li>Title format: primary keyword + outcome</li><li>Description: 1 sentence + proof/benefit</li><li>Use descriptive anchor text internally</li></ul>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "title": "Next.js Performance: Fixing LCP Without Rewriting Everything",
+    "slug": "nextjs-performance-fixing-lcp-without-rewriting-everything",
+    "postTypeKey": "news",
+    "templateKey": "news",
+    "status": "published",
+    "publishDate": "2026-01-03T09:44:00.000Z",
+    "templateData": {
+      "banner": {
+        "bannerTitle": "Next.js Performance: Fixing LCP Without Rewriting Everything",
+        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png"
+      },
+      "intro": {
+        "introText": "We improved perceived speed by prioritising the right assets, not by chasing micro-optimisations.",
+        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg"
+      },
+      "main": {
+        "heading": "LCP: make the hero show up first",
+        "excerpt": "Priority hints, image sizing, and cutting render-blocking CSS got us most of the win.",
+        "body": "<p>We tackled LCP by making sure the hero content loads early and stays stable:</p><ul><li>Reserved layout space to avoid CLS</li><li>Reduced render-blocking work</li><li>Kept client-side JS lean on landing pages</li></ul>",
+        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg",
+        "isDevelopment": true,
+        "isDesign": false,
+        "isSEO": false,
+        "isPerformance": true,
+        "isSecurity": false
+      },
+      "blocks": {
+        "blocks": [
           {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_2.jpg"
+            "blockType": "imageGallery",
+            "gallery": [
+              { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg" },
+              { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png" },
+              { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg" }
             ]
           }
         ]
@@ -146,285 +122,156 @@
     }
   },
   {
-    "title": "5 Signs Your Kirby Needs Professional Attention",
-    "slug": "5-signs-your-kirby-needs-professional-attention",
+    "title": "Security Quick Wins for Web Apps (That Don’t Hurt DX)",
+    "slug": "security-quick-wins-for-web-apps-that-dont-hurt-dx",
     "postTypeKey": "news",
     "templateKey": "news",
     "status": "published",
-    "publishDate": "2025-11-16T19:28:57.644481Z",
+    "publishDate": "2026-01-02T16:20:45.000Z",
     "templateData": {
       "banner": {
-        "bannerTitle": "5 Signs Your Kirby Needs Professional Attention",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_3.jpg"
+        "bannerTitle": "Security Quick Wins for Web Apps (That Don’t Hurt DX)",
+        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg"
       },
       "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_3.jpg"
+        "introText": "A few guardrails: safer headers, better validation, and rate limiting where it matters.",
+        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg"
       },
       "main": {
-        "heading": "5 Signs Your Kirby Needs Professional Attention",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_3.jpg",
-        "categories": [
-          "dyson",
-          "general",
-          "spares"
-        ],
-        "contentBlocks": [
+        "heading": "Safer by default",
+        "excerpt": "We added stricter server validation and protected public endpoints from spam bursts.",
+        "body": "<p>We focused on boring-but-effective measures:</p><ul><li>Server-side validation (always)</li><li>Basic rate limiting on forms</li><li>Sanitised output where user content renders</li></ul><p>It’s not glamorous, but it’s reliable.</p>",
+        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png",
+        "isDevelopment": true,
+        "isDesign": false,
+        "isSEO": false,
+        "isPerformance": false,
+        "isSecurity": true
+      },
+      "blocks": {
+        "blocks": [
           {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
+            "blockType": "richText",
+            "content": "<h3>Rule of thumb</h3><p>If it can be triggered by the public internet, it needs validation, throttling, and logging.</p>"
           }
         ]
       }
     }
   },
   {
-    "title": "Why Regular Vacuum Servicing Saves You Money",
-    "slug": "why-regular-vacuum-servicing-saves-you-money",
+    "title": "Rebuilding a Navigation: From “Everything Everywhere” to Clear IA",
+    "slug": "rebuilding-a-navigation-from-everything-everywhere-to-clear-ia",
     "postTypeKey": "news",
     "templateKey": "news",
     "status": "published",
-    "publishDate": "2025-11-15T19:28:57.644481Z",
+    "publishDate": "2026-01-01T11:05:00.000Z",
     "templateData": {
       "banner": {
-        "bannerTitle": "Why Regular Vacuum Servicing Saves You Money",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_4.jpg"
+        "bannerTitle": "Rebuilding a Navigation: From “Everything Everywhere” to Clear IA",
+        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg"
       },
       "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_4.jpg"
+        "introText": "We simplified the site nav, reduced cognitive load, and improved findability for key pages.",
+        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg"
       },
       "main": {
-        "heading": "Why Regular Vacuum Servicing Saves You Money",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_4.jpg",
-        "categories": [
-          "vacuum",
-          "service"
-        ],
-        "contentBlocks": [
+        "heading": "Fewer choices, faster decisions",
+        "excerpt": "A smaller primary nav + clearer labels improves both UX and internal link structure.",
+        "body": "<p>We cut the primary nav down to the essentials and moved secondary items into contextual menus.</p><p>Unexpected win: cleaner internal linking helped SEO signals as well.</p>",
+        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png",
+        "isDevelopment": false,
+        "isDesign": true,
+        "isSEO": true,
+        "isPerformance": false,
+        "isSecurity": false
+      },
+      "blocks": {
+        "blocks": [
           {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
+            "blockType": "imageGallery",
+            "gallery": [
+              { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg" },
+              { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png" }
+            ]
           },
           {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_3.jpg"
-            ]
+            "blockType": "richText",
+            "content": "<h3>IA tip</h3><p>If a label needs a tooltip, it’s probably not a good label. Use plain language and common terms.</p>"
           }
         ]
       }
     }
   },
   {
-    "title": "The Ultimate Guide to Dyson Filter Care",
-    "slug": "the-ultimate-guide-to-dyson-filter-care",
+    "title": "Accessibility Pass: Focus Rings, Contrast, and Keyboard Paths",
+    "slug": "accessibility-pass-focus-rings-contrast-and-keyboard-paths",
     "postTypeKey": "news",
     "templateKey": "news",
     "status": "published",
-    "publishDate": "2025-11-14T19:28:57.644481Z",
+    "publishDate": "2025-12-31T13:30:00.000Z",
     "templateData": {
       "banner": {
-        "bannerTitle": "The Ultimate Guide to Dyson Filter Care",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_5.jpg"
+        "bannerTitle": "Accessibility Pass: Focus Rings, Contrast, and Keyboard Paths",
+        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png"
       },
       "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_5.jpg"
+        "introText": "We did a quick accessibility sweep: focus visibility, contrast, and ‘can you use it without a mouse?’",
+        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg"
       },
       "main": {
-        "heading": "The Ultimate Guide to Dyson Filter Care",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_5.jpg",
-        "categories": [
-          "service",
-          "general",
-          "spares",
-          "kirby"
-        ],
-        "contentBlocks": [
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_2.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_2.jpg"
-            ]
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_3_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_3_1.jpg"
-            ]
-          }
-        ]
+        "heading": "Keyboard-first checks catch real bugs",
+        "excerpt": "A simple tab-through pass found missing focus states and broken modal traps in minutes.",
+        "body": "<p>We checked:</p><ul><li>Focus order (does it make sense?)</li><li>Focus visibility (is it obvious?)</li><li>Modal traps and escape behaviour</li></ul><p>Small fixes, big UX improvement.</p>",
+        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg",
+        "isDevelopment": true,
+        "isDesign": true,
+        "isSEO": false,
+        "isPerformance": false,
+        "isSecurity": false
+      },
+      "blocks": {
+        "blocks": []
       }
     }
   },
   {
-    "title": "Vacuum Smells? Here's How to Fix It",
-    "slug": "vacuum-smells-heres-how-to-fix-it",
+    "title": "Refactoring CSS: From “Utility Soup” to Intentional Layouts",
+    "slug": "refactoring-css-from-utility-soup-to-intentional-layouts",
     "postTypeKey": "news",
     "templateKey": "news",
     "status": "published",
-    "publishDate": "2025-11-13T19:28:57.644481Z",
+    "publishDate": "2025-12-30T08:15:00.000Z",
     "templateData": {
       "banner": {
-        "bannerTitle": "Vacuum Smells? Here's How to Fix It",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_6.jpg"
+        "bannerTitle": "Refactoring CSS: From “Utility Soup” to Intentional Layouts",
+        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg"
       },
       "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_6.jpg"
+        "introText": "Utilities are great until nobody knows what anything does. We introduced patterns for layout and spacing.",
+        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png"
       },
       "main": {
-        "heading": "Vacuum Smells? Here's How to Fix It",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_6.jpg",
-        "categories": [
-          "kirby",
-          "vacuum",
-          "dyson"
-        ],
-        "contentBlocks": [
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "Top 7 Vacuum Cleaning Myths Debunked",
-    "slug": "top-7-vacuum-cleaning-myths-debunked",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-11-12T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "Top 7 Vacuum Cleaning Myths Debunked",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_7.jpg"
+        "heading": "Layouts should be readable",
+        "excerpt": "We kept utilities, but added layout primitives so the DOM is easier to scan and maintain.",
+        "body": "<p>We introduced a small set of layout components/patterns: containers, stacks, clusters, and grids.</p><p>That reduced repeated class chains and made spacing changes safer.</p>",
+        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg",
+        "isDevelopment": true,
+        "isDesign": true,
+        "isSEO": false,
+        "isPerformance": false,
+        "isSecurity": false
       },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_7.jpg"
-      },
-      "main": {
-        "heading": "Top 7 Vacuum Cleaning Myths Debunked",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_7.jpg",
-        "categories": [
-          "vacuum",
-          "service",
-          "kirby"
-        ],
-        "contentBlocks": [
+      "blocks": {
+        "blocks": [
           {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg"
-            ]
+            "blockType": "richText",
+            "content": "<h3>Keep it simple</h3><p>A layout system should be small enough to remember. If it needs a handbook, it’s too big.</p>"
           },
           {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_3.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "How to Prepare Your Vacuum for a Service Appointment",
-    "slug": "how-to-prepare-your-vacuum-for-a-service-appointment",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-11-11T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "How to Prepare Your Vacuum for a Service Appointment",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_8.jpg"
-      },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_8.jpg"
-      },
-      "main": {
-        "heading": "How to Prepare Your Vacuum for a Service Appointment",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_8.jpg",
-        "categories": [
-          "service",
-          "vacuum"
-        ],
-        "contentBlocks": [
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_3.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_4.jpg"
+            "blockType": "imageGallery",
+            "gallery": [
+              { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg" },
+              { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg" }
             ]
           }
         ]
@@ -432,832 +279,120 @@
     }
   },
   {
-    "title": "Simple Steps to Extend Your Vacuum's Lifespan",
-    "slug": "simple-steps-to-extend-your-vacuums-lifespan",
+    "title": "Build Pipeline Cleanup: Faster CI With Less Noise",
+    "slug": "build-pipeline-cleanup-faster-ci-with-less-noise",
     "postTypeKey": "news",
     "templateKey": "news",
     "status": "published",
-    "publishDate": "2025-11-10T19:28:57.644481Z",
+    "publishDate": "2025-12-29T18:40:00.000Z",
     "templateData": {
       "banner": {
-        "bannerTitle": "Simple Steps to Extend Your Vacuum's Lifespan",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_9.jpg"
+        "bannerTitle": "Build Pipeline Cleanup: Faster CI With Less Noise",
+        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg"
       },
       "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_9.jpg"
+        "introText": "We removed redundant steps, improved caching, and made failures clearer so they’re faster to fix.",
+        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg"
       },
       "main": {
-        "heading": "Simple Steps to Extend Your Vacuum's Lifespan",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_9.jpg",
-        "categories": [
-          "service",
-          "dyson",
-          "general"
-        ],
-        "contentBlocks": [
+        "heading": "CI should be boring",
+        "excerpt": "Less waiting, fewer flaky jobs, and clearer logs for front-end builds.",
+        "body": "<p>We focused on repeatability:</p><ul><li>Cache dependencies</li><li>Split lint/test/build stages</li><li>Fail fast on formatting + types</li></ul>",
+        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png",
+        "isDevelopment": true,
+        "isDesign": false,
+        "isSEO": false,
+        "isPerformance": true,
+        "isSecurity": false
+      },
+      "blocks": {
+        "blocks": [
           {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_3.jpg"
-            ]
+            "blockType": "richText",
+            "content": "<h3>Small win</h3><p>Make logs readable. If the error is buried, it costs time every single PR.</p>"
           }
         ]
       }
     }
   },
   {
-    "title": "Choosing Between Repair and Replacement",
-    "slug": "choosing-between-repair-and-replacement",
+    "title": "Structured Content: Designing Blocks That Editors Actually Use",
+    "slug": "structured-content-designing-blocks-that-editors-actually-use",
     "postTypeKey": "news",
     "templateKey": "news",
     "status": "published",
-    "publishDate": "2025-11-09T19:28:57.644481Z",
+    "publishDate": "2025-12-28T12:00:00.000Z",
     "templateData": {
       "banner": {
-        "bannerTitle": "Choosing Between Repair and Replacement",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_10.jpg"
+        "bannerTitle": "Structured Content: Designing Blocks That Editors Actually Use",
+        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png"
       },
       "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_10.jpg"
+        "introText": "We tested content blocks with real editing flows: less flexibility, more consistency, faster publishing.",
+        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg"
       },
       "main": {
-        "heading": "Choosing Between Repair and Replacement",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_10.jpg",
-        "categories": [
-          "dyson",
-          "service",
-          "general",
-          "spares"
-        ],
-        "contentBlocks": [
+        "heading": "Flexible, but not chaotic",
+        "excerpt": "A couple of well-designed blocks can cover 90% of use cases and keep pages consistent.",
+        "body": "<p>We kept two blocks: <strong>rich text</strong> and <strong>image galleries</strong>. Then we documented patterns like:</p><ul><li>Intro → Gallery → Details</li><li>Problem → Solution → Proof</li></ul><p>Editors ship faster when the structure is clear.</p>",
+        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg",
+        "isDevelopment": true,
+        "isDesign": true,
+        "isSEO": false,
+        "isPerformance": false,
+        "isSecurity": false
+      },
+      "blocks": {
+        "blocks": [
           {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg"
+            "blockType": "imageGallery",
+            "gallery": [
+              { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg" },
+              { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg" },
+              { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png" }
             ]
           },
           {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_1.jpg"
-            ]
+            "blockType": "richText",
+            "content": "<h3>Editor-friendly rule</h3><p>If a block needs a training session, it’s too complex. Keep options minimal and outcomes predictable.</p>"
           }
         ]
       }
     }
   },
   {
-    "title": "Our Most Common Vacuum Service Requests",
-    "slug": "our-most-common-vacuum-service-requests",
+    "title": "Hardening a Marketing Site: Practical Security for Public Pages",
+    "slug": "hardening-a-marketing-site-practical-security-for-public-pages",
     "postTypeKey": "news",
     "templateKey": "news",
     "status": "published",
-    "publishDate": "2025-11-08T19:28:57.644481Z",
+    "publishDate": "2025-12-27T15:25:00.000Z",
     "templateData": {
       "banner": {
-        "bannerTitle": "Our Most Common Vacuum Service Requests",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_11.jpg"
+        "bannerTitle": "Hardening a Marketing Site: Practical Security for Public Pages",
+        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg"
       },
       "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_11.jpg"
+        "introText": "Even “just a brochure site” can get abused. We locked down forms, headers, and embed behaviour.",
+        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png"
       },
       "main": {
-        "heading": "Our Most Common Vacuum Service Requests",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_11.jpg",
-        "categories": [
-          "service",
-          "kirby"
-        ],
-        "contentBlocks": [
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg"
-            ]
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_1.jpg"
-            ]
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_3.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_4.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "Behind the Scenes: A Day in Our Service Workshop",
-    "slug": "behind-the-scenes:-a-day-in-our-service-workshop",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-11-07T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "Behind the Scenes: A Day in Our Service Workshop",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_12.jpg"
+        "heading": "Protect the edges",
+        "excerpt": "We focused on the obvious entry points: forms, third-party embeds, and unsafe defaults.",
+        "body": "<p>We implemented basic hardening:</p><ul><li>Safer response headers</li><li>Form throttling + validation</li><li>Audit of third-party scripts</li></ul><p>Low effort, high return.</p>",
+        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg",
+        "isDevelopment": true,
+        "isDesign": false,
+        "isSEO": false,
+        "isPerformance": false,
+        "isSecurity": true
       },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_12.jpg"
-      },
-      "main": {
-        "heading": "Behind the Scenes: A Day in Our Service Workshop",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_12.jpg",
-        "categories": [
-          "service",
-          "kirby"
-        ],
-        "contentBlocks": [
+      "blocks": {
+        "blocks": [
           {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_3.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_4.jpg"
-            ]
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_3_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_3_1.jpg"
-            ]
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "Safe Vacuum Cleaning Tips for Allergy Sufferers",
-    "slug": "safe-vacuum-cleaning-tips-for-allergy-sufferers",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-11-06T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "Safe Vacuum Cleaning Tips for Allergy Sufferers",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_13.jpg"
-      },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_13.jpg"
-      },
-      "main": {
-        "heading": "Safe Vacuum Cleaning Tips for Allergy Sufferers",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_13.jpg",
-        "categories": [
-          "spares",
-          "kirby"
-        ],
-        "contentBlocks": [
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_2.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "Why Spares Quality Matters More Than You Think",
-    "slug": "why-spares-quality-matters-more-than-you-think",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-11-05T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "Why Spares Quality Matters More Than You Think",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_14.jpg"
-      },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_14.jpg"
-      },
-      "main": {
-        "heading": "Why Spares Quality Matters More Than You Think",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_14.jpg",
-        "categories": [
-          "general",
-          "spares",
-          "dyson"
-        ],
-        "contentBlocks": [
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_3.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "The Best Way to Store Your Vacuum at Home",
-    "slug": "the-best-way-to-store-your-vacuum-at-home",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-11-04T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "The Best Way to Store Your Vacuum at Home",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_15.jpg"
-      },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_15.jpg"
-      },
-      "main": {
-        "heading": "The Best Way to Store Your Vacuum at Home",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_15.jpg",
-        "categories": [
-          "general",
-          "vacuum"
-        ],
-        "contentBlocks": [
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_3.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_3.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_4.jpg"
-            ]
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "Winter Deep Clean: Is Your Vacuum Ready?",
-    "slug": "winter-deep-clean:-is-your-vacuum-ready",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-11-03T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "Winter Deep Clean: Is Your Vacuum Ready?",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_16.jpg"
-      },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_16.jpg"
-      },
-      "main": {
-        "heading": "Winter Deep Clean: Is Your Vacuum Ready?",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_16.jpg",
-        "categories": [
-          "spares",
-          "dyson",
-          "kirby"
-        ],
-        "contentBlocks": [
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_3.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_4.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "Spring Cleaning Checklist for Your Vacuum",
-    "slug": "spring-cleaning-checklist-for-your-vacuum",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-11-02T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "Spring Cleaning Checklist for Your Vacuum",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_17.jpg"
-      },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_17.jpg"
-      },
-      "main": {
-        "heading": "Spring Cleaning Checklist for Your Vacuum",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_17.jpg",
-        "categories": [
-          "dyson",
-          "vacuum",
-          "spares"
-        ],
-        "contentBlocks": [
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_3.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_4.jpg"
-            ]
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_3.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "How We Test Your Vacuum After Servicing",
-    "slug": "how-we-test-your-vacuum-after-servicing",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-11-01T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "How We Test Your Vacuum After Servicing",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_18.jpg"
-      },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_18.jpg"
-      },
-      "main": {
-        "heading": "How We Test Your Vacuum After Servicing",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_18.jpg",
-        "categories": [
-          "spares",
-          "service",
-          "vacuum"
-        ],
-        "contentBlocks": [
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_3.jpg"
-            ]
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_3.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_4.jpg"
-            ]
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "Customer Stories: Vacuum Rescues and Repairs",
-    "slug": "customer-stories:-vacuum-rescues-and-repairs",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-10-31T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "Customer Stories: Vacuum Rescues and Repairs",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_19.jpg"
-      },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_19.jpg"
-      },
-      "main": {
-        "heading": "Customer Stories: Vacuum Rescues and Repairs",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_19.jpg",
-        "categories": [
-          "dyson",
-          "kirby"
-        ],
-        "contentBlocks": [
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_2_2.jpg"
-            ]
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_3_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_3_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_3_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_3_3.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_3_4.jpg"
-            ]
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "Understanding Your Warranty and Service Options",
-    "slug": "understanding-your-warranty-and-service-options",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-10-30T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "Understanding Your Warranty and Service Options",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_20.jpg"
-      },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_20.jpg"
-      },
-      "main": {
-        "heading": "Understanding Your Warranty and Service Options",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_20.jpg",
-        "categories": [
-          "service",
-          "vacuum",
-          "kirby",
-          "spares"
-        ],
-        "contentBlocks": [
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "Quick Fixes You Can Do Before Calling Us",
-    "slug": "quick-fixes-you-can-do-before-calling-us",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-10-29T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "Quick Fixes You Can Do Before Calling Us",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_21.jpg"
-      },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_21.jpg"
-      },
-      "main": {
-        "heading": "Quick Fixes You Can Do Before Calling Us",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_21.jpg",
-        "categories": [
-          "dyson",
-          "kirby",
-          "general",
-          "spares"
-        ],
-        "contentBlocks": [
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg"
-            ]
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_3.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "How to Spot Genuine vs Fake Spares",
-    "slug": "how-to-spot-genuine-vs-fake-spares",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-10-28T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "How to Spot Genuine vs Fake Spares",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_22.jpg"
-      },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_22.jpg"
-      },
-      "main": {
-        "heading": "How to Spot Genuine vs Fake Spares",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_22.jpg",
-        "categories": [
-          "kirby",
-          "general",
-          "service",
-          "vacuum"
-        ],
-        "contentBlocks": [
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_3.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "Our Process for Kirby Overhauls",
-    "slug": "our-process-for-kirby-overhauls",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-10-27T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "Our Process for Kirby Overhauls",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_23.jpg"
-      },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_23.jpg"
-      },
-      "main": {
-        "heading": "Our Process for Kirby Overhauls",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_23.jpg",
-        "categories": [
-          "spares",
-          "general",
-          "service",
-          "kirby"
-        ],
-        "contentBlocks": [
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_3.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_4.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "title": "Is It Time to Upgrade Your Vacuum?",
-    "slug": "is-it-time-to-upgrade-your-vacuum",
-    "postTypeKey": "news",
-    "templateKey": "news",
-    "status": "published",
-    "publishDate": "2025-10-26T19:28:57.644481Z",
-    "templateData": {
-      "banner": {
-        "bannerTitle": "Is It Time to Upgrade Your Vacuum?",
-        "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_banner_24.jpg"
-      },
-      "intro": {
-        "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_intro_24.jpg"
-      },
-      "main": {
-        "heading": "Is It Time to Upgrade Your Vacuum?",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>",
-        "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_featured_24.jpg",
-        "categories": [
-          "general",
-          "spares",
-          "service"
-        ],
-        "contentBlocks": [
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_3.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_0_4.jpg"
-            ]
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_1_1.jpg"
-            ]
-          },
-          {
-            "type": "richText",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>\n<p>Curabitur nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat.</p>\n<h2>What we check</h2>\n<ul>\n  <li>Full motor inspection</li>\n  <li>Filter and bag assessment</li>\n  <li>Deep internal clean</li>\n</ul>\n<p>Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci.</p>"
-          },
-          {
-            "type": "gallery",
-            "images": [
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_3_0.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_3_1.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_3_2.jpg",
-              "https://res.cloudinary.com/ljelfs/image/upload/v1763300000/news_gallery_3_3.jpg"
+            "blockType": "imageGallery",
+            "gallery": [
+              { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png" }
             ]
           }
         ]

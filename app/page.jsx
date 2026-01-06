@@ -5,14 +5,15 @@ import Post from '@/models/Post';
 import HeroSection from '@/components/Homepage/HeroSection';
 
 // New sections (lazy where it makes sense)
-// const TrustSignals = dynamic(() => import('@/components/Homepage/TrustSignals'), { ssr: false });
-// const AboutSection = dynamic(() => import('@/components/Homepage/AboutSection'), { ssr: false });
+const TrustSignalsSection = dynamic(() => import('@/components/Homepage/TrustSignals'), { ssr: false });
+const AboutSection = dynamic(() => import('@/components/Homepage/AboutSection'), { ssr: false });
 const WorkProcess = dynamic(() => import('@/components/Homepage/WorkProcess/WorkProcess'), { ssr: false });
 const BannerCTA = dynamic(() => import('@/components/Homepage/BannerCTA'), { ssr: false });
 
 // Existing globals (if you still want them)
 // const UspsServer = dynamic(() => import('@/components/Usps/UspsServer'), { ssr: true });
 // const ServicesHomepage = dynamic(() => import('@/components/Homepage/Services'), { ssr: false });
+import NewsSlider from '@/components/Homepage/NewsSlider';
 
 export default async function HomePage() {
   await dbConnect();
@@ -48,7 +49,7 @@ export default async function HomePage() {
       <HeroSection data={section1} />
 
       {/* 3. Trust signals */}
-      {/* <TrustSignals data={section2} /> */}
+      <TrustSignalsSection data={section2} />
 
       {/* 4. USPs (global) */}
       {/* <UspsServer /> */}
@@ -57,10 +58,12 @@ export default async function HomePage() {
       {/* <ServicesHomepage services={services} /> */}
 
       {/* 6. About */}
-      {/* <AboutSection data={section3} /> */}
+      <AboutSection data={section3} />
 
       {/* 7. Work / Process */}
       <WorkProcess data={section4} />
+
+      <NewsSlider />
 
       {/* 10. Banner CTA */}
       <BannerCTA data={section5} />

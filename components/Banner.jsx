@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function Banner({ title }) {
   return (
-    <section className="bg-secondary py-20">
+    <section className="bg-black py-20 border-b-2 border-solid border-white">
       <div className="container">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}

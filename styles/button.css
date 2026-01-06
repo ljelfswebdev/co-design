@@ -1,45 +1,71 @@
-.button{
-    width:fit-content;
-    white-space: nowrap;
-    padding: 12px 24px;
-    border-radius: var(--border-primary);
-    border:2px solid;
-    cursor:pointer;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    text-align: center;
+.button {
+  width: fit-content;
+  white-space: nowrap;
+  padding: 14px 32px;
+  border-radius: 999px; /* fully rounded pill */
+  border: 2px solid;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+  letter-spacing: 0.01em;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.button--primary{
-    color: white;
-    border-color: var(--primary);
-    background-color: var(--primary);
+/* subtle premium lift */
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
-.button--primary:hover{
-    color: var(--primary);
-    background-color: white;
+/* tactile press */
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.button--secondary{
-    color: white;
-    border-color: var(--secondary);
-    background-color: var(--secondary);
+/* ===== VARIANTS ===== */
+
+/* PRIMARY */
+.button--primary {
+  color: white;
+  border-color: var(--primary);
+  background-color: var(--primary);
 }
 
-.button--secondary:hover{
-    color: var(--secondary);
-    background-color: white;
+.button--primary:hover {
+  background-color: color-mix(in srgb, var(--primary) 70%, transparent);
+  border-color: color-mix(in srgb, var(--primary) 70%, transparent);
 }
 
-.button--tertiary{
-    color: white;
-    border-color: var(--tertiary);
-    background-color: var(--tertiary);
+/* SECONDARY */
+.button--secondary {
+  color: white;
+  border-color: var(--secondary);
+  background-color: var(--secondary);
 }
 
-.button--tertiary:hover{
-    color: var(--tertiary);
-    background-color: white;
+.button--secondary:hover {
+  background-color: color-mix(in srgb, var(--secondary) 70%, transparent);
+  border-color: color-mix(in srgb, var(--secondary) 70%, transparent);
+}
+
+/* TERTIARY */
+.button--tertiary {
+  color: white;
+  border-color: var(--tertiary);
+  background-color: var(--tertiary);
+}
+
+.button--tertiary:hover {
+  background-color: color-mix(in srgb, var(--tertiary) 70%, transparent);
+  border-color: color-mix(in srgb, var(--tertiary) 70%, transparent);
 }

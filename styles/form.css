@@ -125,6 +125,7 @@ select.form-error {
   border: 2px solid var(--grey) !important;
   border-radius: 5px !important;
   box-shadow: none !important;
+  color: #000000 !important;
 }
 
 .react-select__control:hover,
@@ -132,4 +133,29 @@ select.form-error {
 .react-select__control--menu-is-open {
   border: 2px solid var(--primary) !important;
   box-shadow: none !important;
+}
+
+/* Selected value (single select) */
+.react-select__single-value {
+  color: #000 !important;
+}
+
+/* Placeholder text */
+.react-select__placeholder {
+  color: #000 !important;
+}
+
+/* Dropdown menu container */
+.react-select__menu {
+  color: #000 !important;
+}
+
+/* Each option */
+.react-select__option {
+  color: #000 !important;
+}
+
+/* Multi-select chips (if you ever use them) */
+.react-select__multi-value__label {
+  color: #000 !important;
 }

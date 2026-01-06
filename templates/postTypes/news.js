@@ -19,6 +19,19 @@ export const NEWS_POST_TEMPLATE = [
     ],
   },
 
+  // ✅ ADD THIS (so NewsArchive finds it)
+  {
+    key: 'taxonomy',
+    label: 'Categories',
+    fields: [
+      { name: 'isDevelopment', label: 'Development', type: 'checkbox' },
+      { name: 'isDesign',      label: 'Design',      type: 'checkbox' },
+      { name: 'isSEO',         label: 'SEO',         type: 'checkbox' },
+      { name: 'isPerformance', label: 'Performance', type: 'checkbox' },
+      { name: 'isSecurity',    label: 'Security',    type: 'checkbox' },
+    ],
+  },
+
   {
     key: 'main',
     label: 'Main Content',
@@ -28,17 +41,9 @@ export const NEWS_POST_TEMPLATE = [
       { name: 'body', label: 'Body', type: 'rich' },
       { name: 'featuredImage', label: 'Featured Image', type: 'image' },
 
-      // ✅ Category checkboxes
-      { name: 'isKirby',   label: 'Kirby',   type: 'checkbox' },
-      { name: 'isDyson',   label: 'Dyson',   type: 'checkbox' },
-      { name: 'isSpares',  label: 'Spares',  type: 'checkbox' },
-      { name: 'isVacuum',  label: 'Vacuum',  type: 'checkbox' },
-      { name: 'isService', label: 'Service', type: 'checkbox' },
-      { name: 'isGeneral', label: 'General', type: 'checkbox' },
     ],
   },
 
-  // ✅ Flexible content-style repeater for content blocks
   {
     key: 'blocks',
     label: 'Content Blocks',
@@ -51,29 +56,16 @@ export const NEWS_POST_TEMPLATE = [
           {
             name: 'blockType',
             label: 'Block Type',
-            type: 'select',            // you’ll render this as a select in FieldBuilder
-            options: [
-              'imageGallery',          // Image Gallery
-              'richText',              // Rich Text
-            ],
+            type: 'select',
+            options: ['imageGallery', 'richText'],
           },
           {
             name: 'gallery',
             label: 'Gallery Images',
             type: 'repeater',
-            of: [
-              {
-                name: 'image',
-                label: 'Image',
-                type: 'image',
-              },
-            ],
+            of: [{ name: 'image', label: 'Image', type: 'image' }],
           },
-          {
-            name: 'content',
-            label: 'Rich Text Content',
-            type: 'rich',
-          },
+          { name: 'content', label: 'Rich Text Content', type: 'rich' },
         ],
       },
     ],

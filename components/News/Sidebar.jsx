@@ -92,8 +92,8 @@ export default function NewsSidebar({
   return (
     <aside className="space-y-8">
       {/* Search */}
-      <div className="card">
-        <h3 className="text-sm font-semibold mb-3">Search news</h3>
+      <div className="rounded-primary border-2 border-solid border-primary p-8">
+        <h3 className="text-sm font-semibold mb-3 text-white">Search news</h3>
         <input
           type="text"
           className="input w-full"
@@ -104,8 +104,8 @@ export default function NewsSidebar({
       </div>
 
       {/* Categories */}
-      <div className="card">
-        <h3 className="text-sm font-semibold mb-3">Categories</h3>
+      <div className="rounded-primary border-2 border-solid border-primary p-8">
+        <h3 className="text-sm font-semibold mb-3 text-white">Categories</h3>
         <div className="space-y-2 text-sm">
           {categories.map((label) => {
             const checked = selectedCategories.includes(label);

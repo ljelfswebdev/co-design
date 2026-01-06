@@ -15,10 +15,10 @@ export default function NewsCard({ post }) {
     introText.length > 180 ? `${introText.slice(0, 177)}…` : introText;
 
   return (
-    <article className="card flex flex-col h-full">
+    <article className="border border-white/10 border-solid overflow-hidden rounded-3xl flex flex-col h-full">
       <Link
         href={`/news/${post.slug}`}
-        className="block mb-3 relative w-full aspect-[4/3] overflow-hidden rounded-lg"
+        className="block mb-3 relative w-full aspect-[4/3] overflow-hidden"
       >
         {introImage ? (
           <Image
@@ -32,14 +32,14 @@ export default function NewsCard({ post }) {
         )}
       </Link>
 
-      <div className="flex flex-col flex-1">
+      <div className="flex flex-col flex-1 p-4">
         <h3 className="text-lg font-semibold mb-2">
-          <Link href={`/news/${post.slug}`} className="hover:text-primary">
+          <Link href={`/news/${post.slug}`} className=" text-white hover:text-primary">
             {post.title}
           </Link>
         </h3>
 
-        {snippet && <p className="text-sm text-gray-600 flex-1">{snippet}</p>}
+        {snippet && <p className="text-sm flex-1">{snippet}</p>}
 
         <div className="mt-4">
           <Link href={`/news/${post.slug}`} className="button button--primary w-full">
