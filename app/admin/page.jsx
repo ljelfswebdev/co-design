@@ -13,7 +13,7 @@ export default async function AdminHome() {
         <h2 className="text-lg font-semibold">Admin area</h2>
         <p className="text-sm text-gray-600">
           You&apos;re not logged in. Please{' '}
-          <Link href="/admin/login" className="text-blue-600 underline">
+          <Link href="/admin" className="text-blue-600 underline">
             log in
           </Link>.
         </p>
