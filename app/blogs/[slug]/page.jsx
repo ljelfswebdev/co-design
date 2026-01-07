@@ -3,17 +3,10 @@ import { notFound } from 'next/navigation';
 import { dbConnect } from '@helpers/db';
 import Post from '@/models/Post';
 import { POST_TYPE_TEMPLATES } from '@/templates/postTypes';
+import NewsPostClient from '@/components/News/NewsPostClient';
 
-import Image from '@/helpers/Image';
-import NewsSidebar from '@/components/News/Sidebar';
-import NewsBlocks from '@/components/News/NewsBlocks';
-
-/* ------------------------------------
-   Helper: get ALL news categories
------------------------------------- */
 function getAllNewsCategories() {
   const tpl = POST_TYPE_TEMPLATES?.news?.template || [];
-
   const taxonomySection =
     tpl.find((s) => s.key === 'taxonomy') ||
     tpl.find((s) => s.key === 'categories') ||
@@ -22,12 +15,7 @@ function getAllNewsCategories() {
   if (!taxonomySection?.fields) return [];
 
   return taxonomySection.fields
-    .filter(
-      (f) =>
-        f.type === 'checkbox' &&
-        typeof f.name === 'string' &&
-        f.name.startsWith('is')
-    )
+    .filter((f) => f.type === 'checkbox' && typeof f.name === 'string' && f.name.startsWith('is'))
     .map((f) => f.label)
     .filter(Boolean);
 }
@@ -60,91 +48,22 @@ export default async function NewsPostPage({ params }) {
       })
     : null;
 
-  /* ------------------------------------
-     Categories ON THIS POST (for pills)
-  ------------------------------------ */
   const activeCategories = Object.entries(taxonomy)
     .filter(([, val]) => val === true)
-    .map(([key]) =>
-      key.replace(/^is/, '').replace(/([A-Z])/g, ' $1').trim()
-    );
+    .map(([key]) => key.replace(/^is/, '').replace(/([A-Z])/g, ' $1').trim());
 
-  /* ------------------------------------
-     ALL categories (for sidebar)
-  ------------------------------------ */
   const allCategories = getAllNewsCategories();
 
   return (
-    <>
-      <section className="py-20">
-        <div className="container">
-          <div className="gap-8 flex flex-col-reverse lg:flex-row">
-            {/* MAIN CONTENT */}
-            <div className="grow max-w-4xl space-y-8">
-              {/* TITLE */}
-              <div className="space-y-2">
-                <h1 className="h2 text-white">{title}</h1>
-                {formattedDate && (
-                  <p className="text-sm text-gray-500">{formattedDate}</p>
-                )}
-              </div>
-
-              {/* ACTIVE CATEGORIES */}
-              {activeCategories.length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  {activeCategories.map((cat) => (
-                    <span
-                      key={cat}
-                      className="button button--primary"
-                    >
-                      {cat}
-                    </span>
-                  ))}
-                </div>
-              )}
-
-              {/* INTRO IMAGE */}
-              {intro.introImage && (
-                <div className="relative w-full aspect-[16/9] overflow-hidden rounded-primary">
-                  <Image
-                    src={intro.introImage}
-                    alt={title}
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-              )}
-
-              {/* INTRO TEXT */}
-              {intro.introText && (
-                <p className="text-lg">
-                  {intro.introText}
-                </p>
-              )}
-
-              {/* MAIN BODY */}
-              {main.body && (
-                <div
-                  className="prose max-w-none"
-                  dangerouslySetInnerHTML={{ __html: main.body }}
-                />
-              )}
-
-              {/* FLEXIBLE BLOCKS */}
-              {blocks.length > 0 && <NewsBlocks blocks={blocks} />}
-            </div>
-
-            {/* SIDEBAR (ALL categories, navigate mode) */}
-            <div className="lg:min-w-[400px]">
-              <NewsSidebar
-                categories={allCategories}
-                mode="navigate"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    <NewsPostClient
+      title={title}
+      formattedDate={formattedDate}
+      activeCategories={activeCategories}
+      allCategories={allCategories}
+      introImage={intro.introImage || null}
+      introText={intro.introText || ''}
+      mainBody={main.body || ''}
+      blocks={blocks}
+    />
   );
 }

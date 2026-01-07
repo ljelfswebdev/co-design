@@ -77,7 +77,7 @@ export default function NewsSidebar({
     if (!hasAny) return;
 
     const t = setTimeout(() => {
-      router.push(`/news${queryString}`);
+      router.push(`/blogs${queryString}`);
     }, navigateDebounceMs);
 
     return () => clearTimeout(t);

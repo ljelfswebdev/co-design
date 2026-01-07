@@ -99,9 +99,10 @@ export default function NewsSliderClient({ posts }) {
             }}
           >
             {items.map((post, idx) => (
-              <SwiperSlide key={post._id} className="h-auto">
+              <SwiperSlide key={post._id} className="!h-auto flex">
                 {/* ✅ per-card fade in */}
                 <motion.div
+                 className="h-full flex"
                   initial={{ opacity: 0, y: 14 }}
                   animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
                   transition={{

@@ -57,7 +57,7 @@ export default function SocialLinksClient({
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white hover:text-secondary transition-colors"
+              className="inline-flex items-center gap-2 text-white/70 hover:text-primary transition-colors"
             >
               <SocialIcons name={name} size={size} />
               {showLabels && <span className="capitalize">{name}</span>}

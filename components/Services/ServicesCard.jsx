@@ -6,16 +6,11 @@ export default function ServicesCard({ post }) {
   if (!post) return null;
 
   const data = post?.templateData || {};
+  const main = data?.main || {};
 
-  const title = post?.title || data?.title || 'Service';
-  const excerpt =
-    data?.excerpt ||
-    // fallback: try introText (strip risk: it's HTML — we’ll just do a basic slice)
-    (data?.introText ? String(data.introText).replace(/<[^>]+>/g, '') : '') ||
-    '';
-
-  const image =
-    data?.featuredImage || data?.introImage || data?.bannerImage || null;
+  const title = post?.title || 'Service';
+  const excerpt = main?.excerpt || '';
+  const image = main?.featuredImage || null;
 
   const snippet = excerpt.length > 150 ? `${excerpt.slice(0, 147)}…` : excerpt;
 

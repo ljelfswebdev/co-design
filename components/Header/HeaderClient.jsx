@@ -31,7 +31,7 @@ export default function HeaderClient({ items }) {
     <>
       {/* HEADER */}
       <div className={headerClass}>
-        <div className="container flex items-center justify-between py-6 gap-4 relative">
+        <div className="container flex items-center justify-between max-md:py-4 gap-4 relative">
           {/* LOGO */}
           <Link
             href="/"
@@ -45,7 +45,7 @@ export default function HeaderClient({ items }) {
               width={0}
               height={0}
               priority
-              className="h-12 w-auto"
+              className="h-16 md:h-20 w-auto"
             />
           </Link>
 

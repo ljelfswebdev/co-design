@@ -1,14 +1,6 @@
 // templates/postTypes/news.js
 
 export const NEWS_POST_TEMPLATE = [
-  {
-    key: 'banner',
-    label: 'Banner Section',
-    fields: [
-      { name: 'bannerTitle', label: 'Banner Title', type: 'text' },
-      { name: 'bannerImage', label: 'Banner Image', type: 'image' },
-    ],
-  },
 
   {
     key: 'intro',
