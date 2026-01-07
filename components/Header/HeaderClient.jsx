@@ -14,9 +14,8 @@ export default function HeaderClient({ items }) {
   const topLevel = Array.isArray(items) ? items : [];
 
   const headerClass = [
-    'fixed top-0 left-0 w-full z-50 transition-all duration-200',
-    'bg-black text-white border-b border-white border-b-2',
-  ].join(' ');
+    'fixed top-0 left-0 w-full z-50 transition-all duration-200 bg-black text-white border-b border-white border-b-2',
+  ];
 
   const menuVariants = {
     hidden: { opacity: 0, y: 10 },
@@ -28,7 +27,7 @@ export default function HeaderClient({ items }) {
   };
 
   return (
-    <>
+    <header>
       {/* HEADER */}
       <div className={headerClass}>
         <div className="container flex items-center justify-between py-4 md:py-2 gap-4 relative">
@@ -165,6 +164,6 @@ export default function HeaderClient({ items }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </header>
   );
 }
