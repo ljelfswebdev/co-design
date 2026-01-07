@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
 
            <ScrollProgress />
         <Header />
-        <div className="h-20 w-full"></div>
+        <div className="h-24 w-full"></div>
         <main className="">
           {children}
         </main>

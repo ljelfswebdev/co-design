@@ -24,11 +24,11 @@ export default function NewsPostClient({
   const letters = useMemo(() => (title ? title.split('') : []), [title]);
 
   return (
-    <section ref={ref} className="py-20">
+    <section ref={ref} className="py-12 lg:py-20">
       <div className="container">
         <div className="gap-8 flex flex-col-reverse lg:flex-row">
           {/* MAIN */}
-          <div className="grow max-w-4xl space-y-8">
+          <div className="grow space-y-8">
             {/* ✅ TYPEWRITE TITLE + date fade */}
             <div className="space-y-2">
               <motion.h1

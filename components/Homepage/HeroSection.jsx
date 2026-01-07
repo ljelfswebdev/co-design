@@ -29,7 +29,7 @@ export default function HeroSection({ data }) {
   }
 
   return (
-    <section className="relative w-full h-[600px]">
+    <section className="relative w-full h-auto max-md:aspect-square md:h-[600px]">
       <Swiper
         modules={[Pagination, Autoplay]}
         loop={slides.length > 1}
@@ -47,12 +47,12 @@ export default function HeroSection({ data }) {
           const isActive = idx === activeIndex;
 
           return (
-            <SwiperSlide key={idx} className="h-full">
+            <SwiperSlide key={idx} className="h-auot">
               <div className="relative flex items-center h-full overflow-hidden">
                 {/* Background image (zoom on active) */}
                 {slide.backgroundImage && (
                   <motion.div
-                    className="absolute inset-0"
+                    className="absolute inset-0 h-full"
                     initial={false}
                     animate={{
                       scale: isActive ? 1.2 : 1,

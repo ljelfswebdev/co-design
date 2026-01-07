@@ -93,7 +93,7 @@ export default function HeaderClient({ items }) {
             <span
               className={[
                 'h-1 w-9 rounded-primary bg-white my-1 transition-opacity',
-                open ? 'opacity-0' : 'opacity-100',
+                open ? 'opacity-0 invisible' : 'opacity-100',
               ].join(' ')}
             />
             <span

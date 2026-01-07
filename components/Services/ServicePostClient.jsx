@@ -16,7 +16,7 @@ export default function ServicePostClient({ title, excerpt, featuredImage, block
   const letters = useMemo(() => (title ? title.split('') : []), [title]);
 
   return (
-    <section ref={ref} className="py-20">
+    <section ref={ref} className="py-12 lg:py-20">
       <div className="container">
         <div className="w-full space-y-8">
           {/* ✅ TYPEWRITE TITLE */}
