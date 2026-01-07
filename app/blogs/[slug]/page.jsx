@@ -7,7 +7,6 @@ import { POST_TYPE_TEMPLATES } from '@/templates/postTypes';
 import Image from '@/helpers/Image';
 import NewsSidebar from '@/components/News/Sidebar';
 import NewsBlocks from '@/components/News/NewsBlocks';
-import '@/styles/pages/news.css';
 
 /* ------------------------------------
    Helper: get ALL news categories

@@ -47,3 +47,22 @@ body {
 .card { @apply border border-grey rounded-2xl p-4 bg-white shadow-sm; }
 .label { @apply block font-semibold mb-1 text-sm; }
 
+.site-pagination .swiper-pagination-bullet {
+    background: white;
+    height: 8px;
+    width: 8px;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    margin:0 !important;
+    opacity: 1 !important;
+
+}
+.site-pagination .swiper-pagination-bullet-active {
+
+    width: 16px;
+    opacity: 1;
+
+    @apply
+    bg-primary
+    ;
+}

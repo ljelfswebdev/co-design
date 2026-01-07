@@ -57,7 +57,7 @@ export default function WorkProcessMobile({ data = {}, items = [] }) {
         ))}
       </Swiper>
 
-      <div className="work-pagination flex justify-center gap-2 pb-10" />
+      <div className="work-pagination site-pagination flex justify-center gap-2 pb-10" />
     </section>
   );
 }

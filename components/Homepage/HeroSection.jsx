@@ -95,7 +95,7 @@ export default function HeroSection({ data }) {
       </Swiper>
 
       <div className="container absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
-        <div className="hero-pagination flex gap-2"></div>
+        <div className="hero-pagination site-pagination flex gap-2"></div>
       </div>
     </section>
   );

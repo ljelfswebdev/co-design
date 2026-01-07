@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer';
 import Cursor from '@/components/Cursor';
-import CursorTrail from '@/components/CursorTrail';
+
 import ScrollProgress from '@/components/ScrollProgress';
 
 import 'swiper/css';
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Cursor />
-        <CursorTrail />
+
            <ScrollProgress />
         <Header />
         <div className="h-20 w-full"></div>

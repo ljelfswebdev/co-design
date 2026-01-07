@@ -132,7 +132,7 @@ export default function TestimonialsClient({ posts }) {
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.55 }}
             className="flex justify-center w-fit mx-auto mt-6"
           >
-            <div className="testimonials-pagination flex gap-2" />
+            <div className="testimonials-pagination site-pagination flex gap-2" />
           </motion.div>
         </motion.div>
       </div>

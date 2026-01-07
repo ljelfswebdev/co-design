@@ -1,0 +1,228 @@
+[
+  {
+    "title": "Web Design",
+    "slug": "web-design",
+    "postTypeKey": "services",
+    "templateKey": "services",
+    "status": "published",
+    "publishDate": "2026-01-07T09:00:00.000Z",
+    "templateData": {
+      "bannerTitle": "Web Design That Looks Expensive (Because It Works)",
+      "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg",
+      "introText": "We design modern, conversion-first websites that feel clean, fast, and intentional — not “template-y”.",
+      "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg",
+      "excerpt": "High-end UI with practical UX. Built to convert and easy to evolve.",
+      "description": "<p><strong>Design isn’t decoration.</strong> It’s how your brand communicates trust in 3 seconds.</p><p>We create layout systems, typography, and components that scale — so your site stays consistent as you grow.</p><ul><li>UI systems & components</li><li>UX flows & wireframes</li><li>Mobile-first layouts</li></ul>",
+      "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png",
+      "gallery": [
+        { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg" },
+        { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png" }
+      ],
+      "blocks": [
+        {
+          "blockType": "richText",
+          "content": "<h3>What you get</h3><p>A design system that’s consistent across pages, sections, and future features. No Frankenstein pages.</p>"
+        },
+        {
+          "blockType": "imageGallery",
+          "gallery": [
+            { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg" },
+            { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg" }
+          ]
+        },
+        {
+          "blockType": "richText",
+          "content": "<p><em>Random but true:</em> we’ll argue about spacing like it’s a sport — because the details are the product.</p>"
+        }
+      ]
+    }
+  },
+
+  {
+    "title": "Web Development",
+    "slug": "web-development",
+    "postTypeKey": "services",
+    "templateKey": "services",
+    "status": "published",
+    "publishDate": "2026-01-06T09:00:00.000Z",
+    "templateData": {
+      "bannerTitle": "Build It Properly. Then Ship It Faster.",
+      "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg",
+      "introText": "From landing pages to full builds — we ship clean, maintainable code that doesn’t melt later.",
+      "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png",
+      "excerpt": "Modern stacks, predictable releases, and a site that your team can actually live with.",
+      "description": "<p>We handle implementation end-to-end: components, CMS wiring, integrations, deployment, and QA.</p><p><strong>Goal:</strong> stable, scalable builds with performance baked in — not bolted on.</p>",
+      "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg",
+      "gallery": [
+        { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg" }
+      ],
+      "blocks": [
+        {
+          "blockType": "imageGallery",
+          "gallery": [
+            { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png" },
+            { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg" }
+          ]
+        },
+        {
+          "blockType": "richText",
+          "content": "<h3>Dev vibes</h3><p>Typed where it matters, boring where it should be, and structured so future you doesn’t hate past you.</p>"
+        },
+        {
+          "blockType": "richText",
+          "content": "<p>We’ll happily refactor your “just ship it” MVP into something that can survive success.</p>"
+        }
+      ]
+    }
+  },
+
+  {
+    "title": "Performance Optimisation",
+    "slug": "performance-optimisation",
+    "postTypeKey": "services",
+    "templateKey": "services",
+    "status": "published",
+    "publishDate": "2026-01-05T09:00:00.000Z",
+    "templateData": {
+      "bannerTitle": "Make Your Site Feel Instant",
+      "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png",
+      "introText": "Faster load times, smoother UX, better conversions. Performance is a feature — not an afterthought.",
+      "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg",
+      "excerpt": "Speed, stability, and Core Web Vitals improvements with real-world impact.",
+      "description": "<p>We audit and fix the stuff that actually slows you down: oversized assets, layout shifts, blocking scripts, and messy bundles.</p><ul><li>Core Web Vitals</li><li>Asset + image strategy</li><li>Rendering + caching</li></ul>",
+      "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg",
+      "gallery": [
+        { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png" },
+        { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg" },
+        { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg" }
+      ],
+      "blocks": [
+        {
+          "blockType": "richText",
+          "content": "<p><strong>Hot take:</strong> most “slow sites” are just uncompressed images and 14 tracking scripts fighting to the death.</p>"
+        },
+        {
+          "blockType": "imageGallery",
+          "gallery": [
+            { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg" }
+          ]
+        },
+        {
+          "blockType": "richText",
+          "content": "<h3>Common wins</h3><p>Lazy loading, critical CSS, caching strategy, route-level optimisation, bundle trimming, and cleaning up third-party bloat.</p>"
+        }
+      ]
+    }
+  },
+
+  {
+    "title": "SEO & Technical SEO",
+    "slug": "seo-technical-seo",
+    "postTypeKey": "services",
+    "templateKey": "services",
+    "status": "published",
+    "publishDate": "2026-01-04T09:00:00.000Z",
+    "templateData": {
+      "bannerTitle": "SEO That’s Not Just “Add Keywords”",
+      "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg",
+      "introText": "We fix crawl issues, clean up metadata, improve structure, and align pages to search intent.",
+      "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png",
+      "excerpt": "Technical foundations + content structure so Google actually understands your site.",
+      "description": "<p>SEO is compounding — and the best time to do the technical bits is before you scale content.</p><ul><li>Metadata & open graph</li><li>Indexing & crawlability</li><li>Structured data & internal linking</li></ul>",
+      "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg",
+      "gallery": [
+        { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png" }
+      ],
+      "blocks": [
+        {
+          "blockType": "richText",
+          "content": "<h3>Stuff we actually check</h3><p>Sitemaps, robots rules, canonical tags, redirects, duplicate pages, thin content, and URL structure.</p>"
+        },
+        {
+          "blockType": "richText",
+          "content": "<p>Bonus chaos: we’ll rename your pages if they’re called “Home 2 (final) (new)” 😭</p>"
+        },
+        {
+          "blockType": "imageGallery",
+          "gallery": [
+            { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg" },
+            { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg" }
+          ]
+        }
+      ]
+    }
+  },
+
+  {
+    "title": "UX / UI Audit",
+    "slug": "ux-ui-audit",
+    "postTypeKey": "services",
+    "templateKey": "services",
+    "status": "published",
+    "publishDate": "2026-01-03T09:00:00.000Z",
+    "templateData": {
+      "bannerTitle": "Fix the Confusing Bits (and Keep the Good Bits)",
+      "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg",
+      "introText": "We review your site like a first-time visitor, then map improvements that lift conversion and clarity.",
+      "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg",
+      "excerpt": "Clarity, trust, and flow — a plan you can implement immediately.",
+      "description": "<p>UX isn’t magic. It’s removing friction and making choices obvious.</p><p>We’ll audit navigation, page hierarchy, CTAs, forms, mobile flow, and content density.</p>",
+      "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png",
+      "gallery": [
+        { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg" },
+        { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png" }
+      ],
+      "blocks": [
+        {
+          "blockType": "imageGallery",
+          "gallery": [
+            { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg" },
+            { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png" },
+            { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg" }
+          ]
+        },
+        {
+          "blockType": "richText",
+          "content": "<p><strong>We love receipts.</strong> We’ll point to the exact section and say “this is where users bounce” — then propose fixes.</p>"
+        }
+      ]
+    }
+  },
+
+  {
+    "title": "Website Maintenance & Support",
+    "slug": "website-maintenance-support",
+    "postTypeKey": "services",
+    "templateKey": "services",
+    "status": "published",
+    "publishDate": "2026-01-02T09:00:00.000Z",
+    "templateData": {
+      "bannerTitle": "Keep It Secure. Keep It Updated. Keep It Clean.",
+      "bannerImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638925/blog_uploads/zbh6y0ccb7ikmmrgukci.png",
+      "introText": "Bugs happen. Plugins update. Dependencies change. We keep your site healthy and handled.",
+      "introImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg",
+      "excerpt": "Ongoing care so your site stays stable, secure, and fast.",
+      "description": "<p>Maintenance is not glamorous — until your site breaks at 2am.</p><ul><li>Updates & monitoring</li><li>Fixes & small improvements</li><li>Security basics & hygiene</li></ul>",
+      "featuredImage": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg",
+      "gallery": [
+        { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638907/blog_uploads/zqsoqvdydkseljaz2tae.jpg" }
+      ],
+      "blocks": [
+        {
+          "blockType": "richText",
+          "content": "<h3>What we watch</h3><p>Errors, uptime, broken pages, bad deploys, and random stuff that only breaks on iPhone 12 Mini.</p>"
+        },
+        {
+          "blockType": "imageGallery",
+          "gallery": [
+            { "image": "https://res.cloudinary.com/ljelfs/image/upload/v1767638918/blog_uploads/y7nesgxxns2nnkzauinv.jpg" }
+          ]
+        },
+        {
+          "blockType": "richText",
+          "content": "<p>Unhinged but helpful: we’ll also delete weird old drafts and tidy your CMS so it’s not a horror movie.</p>"
+        }
+      ]
+    }
+  }
+]

@@ -13,7 +13,7 @@ const BannerCTA = dynamic(() => import('@/components/Homepage/BannerCTA'), { ssr
 
 // Existing globals (if you still want them)
 // const UspsServer = dynamic(() => import('@/components/Usps/UspsServer'), { ssr: true });
-// const ServicesHomepage = dynamic(() => import('@/components/Homepage/Services'), { ssr: false });
+import ServicesSlider from '@/components/Homepage/ServicesSlider';
 import NewsSlider from '@/components/Homepage/NewsSlider';
 import Testimonials from '@/components/Homepage/Testimonials';
 
@@ -57,7 +57,7 @@ export default async function HomePage() {
       {/* <UspsServer /> */}
 
       {/* 5. Services / What we do (global posts) */}
-      {/* <ServicesHomepage services={services} /> */}
+      <ServicesSlider />
 
       {/* 6. About */}
       <AboutSection data={section3} />

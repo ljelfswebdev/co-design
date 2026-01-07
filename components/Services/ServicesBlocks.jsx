@@ -1,3 +1,4 @@
+// components/Services/ServicesBlocks.jsx
 'use client';
 
 import Image from '@/helpers/Image';
@@ -7,12 +8,13 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-export default function NewsBlocks({ blocks }) {
+export default function ServicesBlocks({ blocks }) {
   const items = Array.isArray(blocks) ? blocks : [];
 
   return (
     <div className="space-y-10">
       {items.map((block, i) => {
+        // Rich text block
         if (block.blockType === 'richText' && block.content) {
           return (
             <div
@@ -23,6 +25,7 @@ export default function NewsBlocks({ blocks }) {
           );
         }
 
+        // Image gallery block
         if (block.blockType === 'imageGallery' && block.gallery?.length) {
           // Single image
           if (block.gallery.length === 1) {
@@ -37,7 +40,7 @@ export default function NewsBlocks({ blocks }) {
           }
 
           // Multiple images → Swiper with custom pagination target
-          const paginationClass = `news-pagination-${i}`;
+          const paginationClass = `services-pagination-${i}`;
 
           return (
             <div key={i} className="space-y-4">
@@ -46,7 +49,7 @@ export default function NewsBlocks({ blocks }) {
                 spaceBetween={16}
                 pagination={{
                   clickable: true,
-                  el: `.${paginationClass}`, // ✅ CUSTOM TARGET PER BLOCK
+                  el: `.${paginationClass}`, // ✅ custom per block
                 }}
               >
                 {block.gallery.map((img, j) => (
@@ -58,9 +61,9 @@ export default function NewsBlocks({ blocks }) {
                 ))}
               </Swiper>
 
-              {/* ✅ PAGINATION – centered (per gallery block) */}
+              {/* Pagination (per gallery block) */}
               <div className="flex justify-center w-fit mx-auto">
-                <div className={`${paginationClass} news-pagination site-pagination flex gap-2`} />
+                <div className={`${paginationClass} services-pagination site-pagination flex gap-2`} />
               </div>
             </div>
           );

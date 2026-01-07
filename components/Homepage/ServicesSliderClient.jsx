@@ -1,3 +1,4 @@
+// components/Homepage/ServicesSliderClient.jsx
 'use client';
 
 import { useMemo, useRef } from 'react';
@@ -9,9 +10,9 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import NewsCard from '@/components/News/Card';
+import ServicesCard from '@/components/Services/ServicesCard';
 
-export default function NewsSliderClient({ posts }) {
+export default function ServicesSliderClient({ posts }) {
   const ref = useRef(null);
   const inView = useInView(ref, { amount: 0.25, once: true });
 
@@ -20,17 +21,19 @@ export default function NewsSliderClient({ posts }) {
 
   const shouldLoop = items.length > 3;
 
-  const title = 'Latest Blogs';
+  const title = 'Our Services';
   const letters = useMemo(() => title.split(''), [title]);
 
   return (
     <section ref={ref} className="py-12 relative">
+      {/* background glow like News */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 right-10 h-72 w-72 rounded-full blur-3xl opacity-10 bg-primary" />
         <div className="absolute -bottom-24 left-10 h-72 w-72 rounded-full blur-3xl opacity-10 bg-primary" />
       </div>
+
       <div className="container space-y-8">
-        {/* ✅ TYPEWRITE TITLE (on inView) */}
+        {/* Title */}
         <motion.h2
           className="h3 text-center text-white"
           initial="hidden"
@@ -59,7 +62,7 @@ export default function NewsSliderClient({ posts }) {
             </motion.span>
           ))}
 
-          {/* ✅ blink cursor then disappear */}
+          {/* blink cursor */}
           <motion.span
             className="inline-block ml-1 align-baseline"
             initial={{ opacity: 0 }}
@@ -75,7 +78,7 @@ export default function NewsSliderClient({ posts }) {
           </motion.span>
         </motion.h2>
 
-        {/* ✅ FADE IN SLIDER when inView */}
+        {/* Slider */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
@@ -86,12 +89,10 @@ export default function NewsSliderClient({ posts }) {
             slidesPerView={1}
             spaceBetween={16}
             loop={shouldLoop}
-            autoplay={
-              shouldLoop ? { delay: 10000, disableOnInteraction: false } : false
-            }
+            autoplay={shouldLoop ? { delay: 9000, disableOnInteraction: false } : false}
             pagination={{
               clickable: true,
-              el: '.news-pagination',
+              el: '.services-pagination',
             }}
             breakpoints={{
               768: { slidesPerView: 2, spaceBetween: 20 },
@@ -100,7 +101,6 @@ export default function NewsSliderClient({ posts }) {
           >
             {items.map((post, idx) => (
               <SwiperSlide key={post._id} className="h-auto">
-                {/* ✅ per-card fade in */}
                 <motion.div
                   initial={{ opacity: 0, y: 14 }}
                   animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
@@ -110,26 +110,27 @@ export default function NewsSliderClient({ posts }) {
                     delay: 0.35 + idx * 0.08,
                   }}
                 >
-                  <NewsCard post={post} />
+                  <ServicesCard post={post} />
                 </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
 
-          {/* ✅ PAGINATION – centered */}
+          {/* Pagination */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.55 }}
             className="flex justify-center w-fit mx-auto mt-6"
           >
-            <div className="news-pagination site-pagination flex gap-2" />
+            <div className="services-pagination site-pagination flex gap-2" />
           </motion.div>
         </motion.div>
 
-        <Link href="/blogs" className="button button--primary mx-auto w-fit flex">
-            View All Blogs
-          </Link>
+        {/* CTA */}
+        <Link href="/services" className="button button--primary mx-auto w-fit flex">
+          View All Services
+        </Link>
       </div>
     </section>
   );
