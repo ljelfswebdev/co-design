@@ -28,7 +28,7 @@ const words = useMemo(
   const typingDuration = words.length * STAGGER + TITLE_DELAY;
 
   return (
-    <section ref={ref} className="py-20 border-t-2 border-solid border-grey relative">
+    <section ref={ref} className="py-12 lg:py-20 border-t-2 border-solid border-grey relative">
       {/* blur spots */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full blur-3xl opacity-10 bg-primary" />
@@ -58,30 +58,30 @@ const words = useMemo(
                     }}
                     aria-label={pageTitle}
                   >
-{words.map((word, wIdx) => (
-  <span
-    key={`word-${wIdx}`}
-    className="inline-block whitespace-nowrap mr-[0.25em]"
-  >
-    {word.split('').map((ch, i) => (
-      <motion.span
-        key={`${wIdx}-${ch}-${i}`}
-        className="inline-block"
-        variants={{
-          hidden: { opacity: 0, y: 10, filter: 'blur(6px)' },
-          show: {
-            opacity: 1,
-            y: 0,
-            filter: 'blur(0px)',
-            transition: { duration: 0.22, ease: 'easeOut' },
-          },
-        }}
-      >
-        {ch}
-      </motion.span>
-    ))}
-  </span>
-))}
+                  {words.map((word, wIdx) => (
+                    <span
+                      key={`word-${wIdx}`}
+                      className="inline-block whitespace-nowrap mr-[0.25em]"
+                    >
+                      {word.split('').map((ch, i) => (
+                        <motion.span
+                          key={`${wIdx}-${ch}-${i}`}
+                          className="inline-block"
+                          variants={{
+                            hidden: { opacity: 0, y: 10, filter: 'blur(6px)' },
+                            show: {
+                              opacity: 1,
+                              y: 0,
+                              filter: 'blur(0px)',
+                              transition: { duration: 0.22, ease: 'easeOut' },
+                            },
+                          }}
+                        >
+                          {ch}
+                        </motion.span>
+                      ))}
+                    </span>
+                  ))}
 
                     {/* cursor blink then disappear */}
                     <motion.span

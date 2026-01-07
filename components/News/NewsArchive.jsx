@@ -166,7 +166,7 @@ const words = useMemo(() => (pageTitle ? pageTitle.split(' ') : []), [pageTitle]
   }
 
   return (
-    <section className="py-12">
+    <section className="py-12 lg:py-20">
       <div className="container">
         {/* ✅ PAGE HEADER (typewrite title, then text fade) */}
         <div ref={headerRef} className="mb-10 space-y-3">

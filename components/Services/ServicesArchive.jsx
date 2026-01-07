@@ -22,7 +22,7 @@ export default function ServicesArchive({ posts, page }) {
 
 
   return (
-    <section className="py-12">
+    <section className="py-12 lg:py-20">
       <div className="container">
         {/* Header */}
         <div ref={headerRef} className="mb-10 space-y-3">
