@@ -1,155 +1,191 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
-export default function Cursor() {
-  const arrowRef = useRef(null);
+class Particle {
+  constructor(x, y) {
+    this.initialLifeSpan = Math.floor(Math.random() * 60 + 60);
+    this.lifeSpan = this.initialLifeSpan;
 
-  const mouse = useRef({ x: -100, y: -100 });
-  const pos = useRef({ x: -100, y: -100 });
-  const prev = useRef({ x: -100, y: -100 });
+    this.velocity = {
+      x: (Math.random() < 0.5 ? -1 : 1) * (Math.random() / 10),
+      y: -0.4 + Math.random() * -1,
+    };
 
+    this.position = { x, y };
+    this.baseDimension = 4;
+  }
+
+  update(ctx) {
+    this.position.x += this.velocity.x;
+    this.position.y += this.velocity.y;
+
+    this.velocity.x += ((Math.random() < 0.5 ? -1 : 1) * 2) / 75;
+    this.velocity.y -= Math.random() / 600;
+
+    this.lifeSpan--;
+
+    const scale =
+      0.2 + (this.initialLifeSpan - this.lifeSpan) / this.initialLifeSpan;
+
+    // tweak these to match your theme
+    ctx.fillStyle = 'rgba(230,241,247,0.8)';
+    ctx.strokeStyle = 'rgba(104,43,215,0.65)';
+
+    ctx.beginPath();
+    ctx.arc(
+      this.position.x - (this.baseDimension / 2) * scale,
+      this.position.y - this.baseDimension / 2,
+      this.baseDimension * scale,
+      0,
+      2 * Math.PI
+    );
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+  }
+}
+
+export default function Cursor({ wrapperElement } = {}) {
+  const canvasRef = useRef(null);
+  const particlesRef = useRef([]);
   const rafRef = useRef(null);
 
-  const [hovering, setHovering] = useState(false);
-  const [clicked, setClicked] = useState(false);
-
-  // trail
-  const DOT_COUNT = 10;
-  const trail = useRef([]);
-
-  const EASE = 0.22;
-  const TRAIL_EASE = 0.3;
-
   useEffect(() => {
+    const prefersReducedMotion =
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     const isFinePointer =
       typeof window !== 'undefined' &&
       window.matchMedia &&
       window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-    if (!isFinePointer) return;
+    if (prefersReducedMotion || !isFinePointer) return;
 
-    const onMove = (e) => {
-      mouse.current.x = e.clientX;
-      mouse.current.y = e.clientY;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let mounted = true;
+
+    const host = wrapperElement || document.body;
+
+    // Attach canvas to DOM (fixed by default, absolute if wrapperElement)
+    canvas.style.top = '0px';
+    canvas.style.left = '0px';
+    canvas.style.pointerEvents = 'none';
+    canvas.style.zIndex = '9999';
+
+    if (wrapperElement) {
+      canvas.style.position = 'absolute';
+      wrapperElement.appendChild(canvas);
+    } else {
+      canvas.style.position = 'fixed';
+      document.body.appendChild(canvas);
+    }
+
+    const resize = () => {
+      if (!mounted) return;
+      if (wrapperElement) {
+        canvas.width = wrapperElement.clientWidth;
+        canvas.height = wrapperElement.clientHeight;
+      } else {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
     };
 
-    const onOver = (e) => {
-      const t = e.target?.closest?.(
-        'a, button, [role="button"], input, textarea, select, label, summary, [data-cursor="hover"]'
-      );
-      setHovering(!!t);
+    const addParticle = (x, y) => {
+      particlesRef.current.push(new Particle(x, y));
+
+      // safety cap so it never goes insane
+      if (particlesRef.current.length > 400) {
+        particlesRef.current.splice(0, particlesRef.current.length - 400);
+      }
     };
 
-    const onDown = () => {
-      setClicked(true);
-      window.clearTimeout(window.__cursorClickT);
-      window.__cursorClickT = window.setTimeout(() => setClicked(false), 120);
+    const onMouseMove = (e) => {
+      if (!mounted) return;
+
+      if (wrapperElement) {
+        const rect = wrapperElement.getBoundingClientRect();
+        addParticle(e.clientX - rect.left, e.clientY - rect.top);
+      } else {
+        addParticle(e.clientX, e.clientY);
+      }
     };
 
-    window.addEventListener('mousemove', onMove, { passive: true });
-    window.addEventListener('mouseover', onOver, { passive: true });
-    window.addEventListener('mousedown', onDown, { passive: true });
+    const onTouchMove = (e) => {
+      if (!mounted) return;
+      if (!e.touches || e.touches.length === 0) return;
 
-    // init trail
-    trail.current = Array.from({ length: DOT_COUNT }, (_, i) => ({
-      x: mouse.current.x,
-      y: mouse.current.y,
-      el: document.getElementById(`cursor-trail-${i}`),
-    }));
+      for (let i = 0; i < e.touches.length; i++) {
+        const t = e.touches[i];
+        if (wrapperElement) {
+          const rect = wrapperElement.getBoundingClientRect();
+          addParticle(t.clientX - rect.left, t.clientY - rect.top);
+        } else {
+          addParticle(t.clientX, t.clientY);
+        }
+      }
+    };
 
-    const animate = () => {
-      // cursor easing
-      pos.current.x += (mouse.current.x - pos.current.x) * EASE;
-      pos.current.y += (mouse.current.y - pos.current.y) * EASE;
+    const updateParticles = () => {
+      if (!mounted) return;
 
-      // rotation
-      const dx = pos.current.x - prev.current.x;
-      const dy = pos.current.y - prev.current.y;
-      const ang = Math.atan2(dy, dx) * (180 / Math.PI);
-
-      prev.current.x = pos.current.x;
-      prev.current.y = pos.current.y;
-
-      if (arrowRef.current) {
-        arrowRef.current.style.transform = `
-          translate3d(${pos.current.x}px, ${pos.current.y}px, 0)
-          translate(-50%, -50%)
-          rotate(${ang}deg)
-          scale(${clicked ? 0.85 : hovering ? 1.15 : 1})
-        `;
+      if (!particlesRef.current.length) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        return;
       }
 
-      // trail
-      let x = pos.current.x;
-      let y = pos.current.y;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      trail.current.forEach((dot) => {
-        if (!dot.el) return;
+      for (let i = 0; i < particlesRef.current.length; i++) {
+        particlesRef.current[i].update(ctx);
+      }
 
-        dot.x += (x - dot.x) * TRAIL_EASE;
-        dot.y += (y - dot.y) * TRAIL_EASE;
-
-        dot.el.style.transform = `translate3d(${dot.x}px, ${dot.y}px, 0)`;
-
-        x = dot.x;
-        y = dot.y;
-      });
-
-      rafRef.current = requestAnimationFrame(animate);
+      for (let i = particlesRef.current.length - 1; i >= 0; i--) {
+        if (particlesRef.current[i].lifeSpan < 0) {
+          particlesRef.current.splice(i, 1);
+        }
+      }
     };
 
-    rafRef.current = requestAnimationFrame(animate);
+    const loop = () => {
+      updateParticles();
+      rafRef.current = requestAnimationFrame(loop);
+    };
+
+    resize();
+
+    host.addEventListener('mousemove', onMouseMove, { passive: true });
+    host.addEventListener('touchmove', onTouchMove, { passive: true });
+    host.addEventListener('touchstart', onTouchMove, { passive: true });
+    window.addEventListener('resize', resize);
+
+    loop();
 
     return () => {
-      window.removeEventListener('mousemove', onMove);
-      window.removeEventListener('mouseover', onOver);
-      window.removeEventListener('mousedown', onDown);
+      mounted = false;
+
+      host.removeEventListener('mousemove', onMouseMove);
+      host.removeEventListener('touchmove', onTouchMove);
+      host.removeEventListener('touchstart', onTouchMove);
+      window.removeEventListener('resize', resize);
+
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
+
+      // remove canvas if we appended it
+      try {
+        canvas.remove();
+      } catch {}
     };
-  }, [hovering, clicked]);
+  }, [wrapperElement]);
 
-  return (
-    <>
-      {/* TRAIL */}
-      {Array.from({ length: DOT_COUNT }).map((_, i) => (
-        <div
-          key={i}
-          id={`cursor-trail-${i}`}
-          className="fixed top-0 left-0 pointer-events-none z-[9998]"
-          style={{
-            width: 4,
-            height: 4,
-            borderRadius: 9999,
-            background: '#682bd7',
-            opacity: 0.45 - (i / DOT_COUNT) * 0.45,
-          }}
-        />
-      ))}
-
-      {/* ARROW */}
-      <div
-        ref={arrowRef}
-        className="fixed top-0 left-0 pointer-events-none z-[10000]"
-        style={{
-          width: 20,
-          height: 20,
-          transform: 'translate3d(-100px,-100px,0)',
-          transition: 'filter 120ms ease-out',
-          filter: hovering ? 'drop-shadow(0 0 6px rgba(104,43,215,0.6))' : 'none',
-        }}
-      >
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#682bd7"
-          strokeWidth="2.4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M4 20 L20 12 L4 4 Z" />
-        </svg>
-      </div>
-    </>
-  );
+  // canvas gets appended to body/wrapper in effect
+  return <canvas ref={canvasRef} />;
 }
