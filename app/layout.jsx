@@ -27,11 +27,11 @@ export default function RootLayout({ children }) {
         <Cursor />
 
            <ScrollProgress />
-        <Header />
-        <div className="h-24 w-full"></div>
-        <main className="">
-          {children}
-        </main>
+  
+          <Header />
+          <main className="pt-24">
+            {children}
+          </main>
         <Footer />
         <ToasterClient position="top-right" />
       </body>
