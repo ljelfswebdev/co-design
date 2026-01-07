@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
            <ScrollProgress />
   
           <Header />
-          <main className="pt-0">
+          <main className="pt-24">
             {children}
           </main>
         <Footer />

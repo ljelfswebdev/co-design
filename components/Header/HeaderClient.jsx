@@ -14,7 +14,7 @@ export default function HeaderClient({ items }) {
   const topLevel = Array.isArray(items) ? items : [];
 
   const headerClass = [
-    'sticky top-0 left-0 w-full z-50 transition-all duration-200 bg-black text-white border-b border-white border-b-2',
+    'fixed top-0 left-0 w-full z-50 transition-all duration-200 bg-black text-white border-b border-white border-b-2',
   ];
 
   const menuVariants = {
