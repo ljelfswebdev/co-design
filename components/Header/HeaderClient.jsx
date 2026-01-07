@@ -14,7 +14,7 @@ export default function HeaderClient({ items }) {
   const topLevel = Array.isArray(items) ? items : [];
 
   const headerClass = [
-    'fixed top-0 left-0 w-full z-50 transition-all duration-200 bg-black text-white border-b border-white border-b-2',
+    'sticky top-0 left-0 w-full z-50 transition-all duration-200 bg-black text-white border-b border-white border-b-2',
   ];
 
   const menuVariants = {
@@ -27,9 +27,9 @@ export default function HeaderClient({ items }) {
   };
 
   return (
-    <header>
+    <header className={headerClass}>
       {/* HEADER */}
-      <div className={headerClass}>
+      
         <div className="container flex items-center justify-between py-4 md:py-2 gap-4 relative">
           {/* LOGO */}
           <Link
@@ -103,7 +103,7 @@ export default function HeaderClient({ items }) {
             />
           </button>
         </div>
-      </div>
+     
 
       {/* MOBILE OVERLAY MENU */}
       <AnimatePresence>
