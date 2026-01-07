@@ -13,7 +13,17 @@ export default function ServicePostClient({ title, excerpt, featuredImage, block
   const ref = useRef(null);
   const inView = useInView(ref, { amount: 0.12, once: true, margin: '-10% 0px -10% 0px' });
 
-  const letters = useMemo(() => (title ? title.split('') : []), [title]);
+  const words = useMemo(() => (title ? title.split(' ') : []), [title]);
+
+  const STAGGER = 0.035;
+  const TITLE_DELAY = 0.12;
+
+  const charCount = useMemo(
+    () => words.reduce((acc, w) => acc + w.length, 0),
+    [words]
+  );
+
+  const typingDuration = charCount * STAGGER + TITLE_DELAY;
 
   return (
     <section ref={ref} className="py-12 lg:py-20">
@@ -30,23 +40,30 @@ export default function ServicePostClient({ title, excerpt, featuredImage, block
             }}
             aria-label={title}
           >
-            {letters.map((ch, i) => (
-              <motion.span
-                key={`${ch}-${i}`}
-                className="inline-block"
-                variants={{
-                  hidden: { opacity: 0, y: 10, filter: 'blur(6px)' },
-                  show: {
-                    opacity: 1,
-                    y: 0,
-                    filter: 'blur(0px)',
-                    transition: { duration: 0.22, ease: 'easeOut' },
-                  },
-                }}
-              >
-                {ch === ' ' ? '\u00A0' : ch}
-              </motion.span>
-            ))}
+          {words.map((word, wIdx) => (
+            <span
+              key={`word-${wIdx}`}
+              className="inline-block whitespace-nowrap mr-[0.25em]"
+            >
+              {word.split('').map((ch, i) => (
+                <motion.span
+                  key={`${wIdx}-${ch}-${i}`}
+                  className="inline-block"
+                  variants={{
+                    hidden: { opacity: 0, y: 10, filter: 'blur(6px)' },
+                    show: {
+                      opacity: 1,
+                      y: 0,
+                      filter: 'blur(0px)',
+                      transition: { duration: 0.22, ease: 'easeOut' },
+                    },
+                  }}
+                >
+                  {ch}
+                </motion.span>
+              ))}
+            </span>
+          ))}
 
             {/* blink cursor */}
             <motion.span
@@ -56,7 +73,7 @@ export default function ServicePostClient({ title, excerpt, featuredImage, block
               transition={{
                 duration: 1.2,
                 ease: 'easeInOut',
-                delay: Math.max(0.4, letters.length * 0.035 + 0.12),
+                delay: Math.max(0.4, words.length * 0.035 + 0.12),
                 times: [0, 0.2, 0.4, 0.6, 0.8, 1],
               }}
             >
@@ -95,7 +112,7 @@ export default function ServicePostClient({ title, excerpt, featuredImage, block
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.38 }}
             >
-              <RepeaterBlocks blocks={blocks} paginationPrefix="services" />;
+              <RepeaterBlocks blocks={blocks} paginationPrefix="services" />
             </motion.div>
           ) : null}
 

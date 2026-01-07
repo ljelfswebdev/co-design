@@ -15,9 +15,11 @@ export default function ServicesArchive({ posts, page }) {
   const headerRef = useRef(null);
   const headerInView = useInView(headerRef, { amount: 0.6, once: true });
 
-  const letters = useMemo(() => (pageTitle ? pageTitle.split('') : []), [pageTitle]);
+  const words = useMemo(() => (pageTitle ? pageTitle.split(' ') : []), [pageTitle]);
+
   const STAGGER = 0.03;
   const TITLE_DELAY = 0.1;
+
 
   return (
     <section className="py-12">
@@ -36,23 +38,30 @@ export default function ServicesArchive({ posts, page }) {
             }}
             aria-label={pageTitle}
           >
-            {letters.map((ch, i) => (
-              <motion.span
-                key={`${ch}-${i}`}
-                className="inline-block"
-                variants={{
-                  hidden: { opacity: 0, y: 10, filter: 'blur(6px)' },
-                  show: {
-                    opacity: 1,
-                    y: 0,
-                    filter: 'blur(0px)',
-                    transition: { duration: 0.22, ease: 'easeOut' },
-                  },
-                }}
-              >
-                {ch === ' ' ? '\u00A0' : ch}
-              </motion.span>
-            ))}
+          {words.map((word, wIdx) => (
+            <span
+              key={`word-${wIdx}`}
+              className="inline-block whitespace-nowrap mr-[0.25em]"
+            >
+              {word.split('').map((ch, i) => (
+                <motion.span
+                  key={`${wIdx}-${ch}-${i}`}
+                  className="inline-block"
+                  variants={{
+                    hidden: { opacity: 0, y: 10, filter: 'blur(6px)' },
+                    show: {
+                      opacity: 1,
+                      y: 0,
+                      filter: 'blur(0px)',
+                      transition: { duration: 0.22, ease: 'easeOut' },
+                    },
+                  }}
+                >
+                  {ch}
+                </motion.span>
+              ))}
+            </span>
+          ))}
           </motion.h1>
 
           {pageText ? (

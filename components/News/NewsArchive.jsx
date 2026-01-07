@@ -65,11 +65,15 @@ export default function NewsArchive({ posts, page }) {
   const headerRef = useRef(null);
   const headerInView = useInView(headerRef, { amount: 0.6, once: true });
 
-  const letters = useMemo(() => (pageTitle ? pageTitle.split('') : []), [pageTitle]);
+const words = useMemo(() => (pageTitle ? pageTitle.split(' ') : []), [pageTitle]);
 
   const STAGGER = 0.035;
   const TITLE_DELAY = 0.12;
-  const typingDuration = letters.length * STAGGER + TITLE_DELAY;
+  const charCount = useMemo(
+    () => words.reduce((acc, w) => acc + w.length, 0),
+    [words]
+  );
+  const typingDuration = charCount * STAGGER + TITLE_DELAY;
 
   // reset page when filters change
   useEffect(() => {
@@ -181,22 +185,29 @@ export default function NewsArchive({ posts, page }) {
             }}
             aria-label={pageTitle}
           >
-            {letters.map((ch, i) => (
-              <motion.span
-                key={`${ch}-${i}`}
-                className="inline-block"
-                variants={{
-                  hidden: { opacity: 0, y: 10, filter: 'blur(6px)' },
-                  show: {
-                    opacity: 1,
-                    y: 0,
-                    filter: 'blur(0px)',
-                    transition: { duration: 0.22, ease: 'easeOut' },
-                  },
-                }}
+            {words.map((word, wIdx) => (
+              <span
+                key={`word-${wIdx}`}
+                className="inline-block whitespace-nowrap mr-[0.25em]"
               >
-                {ch === ' ' ? '\u00A0' : ch}
-              </motion.span>
+                {word.split('').map((ch, i) => (
+                  <motion.span
+                    key={`${wIdx}-${ch}-${i}`}
+                    className="inline-block"
+                    variants={{
+                      hidden: { opacity: 0, y: 10, filter: 'blur(6px)' },
+                      show: {
+                        opacity: 1,
+                        y: 0,
+                        filter: 'blur(0px)',
+                        transition: { duration: 0.22, ease: 'easeOut' },
+                      },
+                    }}
+                  >
+                    {ch}
+                  </motion.span>
+                ))}
+              </span>
             ))}
 
             {/* ✅ blink cursor then disappear */}

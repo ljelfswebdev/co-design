@@ -35,7 +35,7 @@ export default function ContactCards({ phone, email, address }) {
     <div className="grid gap-6">
       {phone && (
         <CardShell icon={<PhoneIcon />} title="Phone">
-          <a className="hover:underline" href={`tel:${String(phone).replace(/\s+/g, '')}`}>
+          <a className="hover:underline break-all" href={`tel:${String(phone).replace(/\s+/g, '')}`}>
             {phone}
           </a>
         </CardShell>
@@ -43,7 +43,7 @@ export default function ContactCards({ phone, email, address }) {
 
       {email && (
         <CardShell icon={<EmailIcon />} title="Email">
-          <a className="hover:underline" href={`mailto:${email}`}>
+          <a className="hover:underline break-all" href={`mailto:${email}`}>
             {email}
           </a>
         </CardShell>

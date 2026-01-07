@@ -19,17 +19,23 @@ export default function AboutSection({ data }) {
   const linkText = data?.linkText || '';
   const linkUrl = data?.linkUrl || '#';
 
-  const letters = useMemo(() => title.split(''), [title]);
+  const words = useMemo(() => (title ? title.split(' ') : []), [title]);
 
   const STAGGER = 0.035;
   const TITLE_DELAY = 0.15;
-  const typingDuration = letters.length * STAGGER + TITLE_DELAY;
+
+  const charCount = useMemo(
+    () => words.reduce((acc, w) => acc + w.length, 0),
+    [words]
+  );
+
+  const typingDuration = charCount * STAGGER + TITLE_DELAY;
 
   return (
-    <section ref={ref} className="relative py-20 lg:py-28 oveflow-x-clip">
+    <section ref={ref} className="relative py-20 lg:py-28 overflow-x-clip">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full blur-3xl opacity-20 bg-primary" />
-        <div className="absolute -bottom-24 left-1/2 h-72 w-72 rounded-full blur-3xl opacity-20 bg-primary" />
+        <div className="absolute -bottom-24 left-0 md:left-1/2 h-72 w-72 rounded-full blur-3xl opacity-20 bg-primary" />
       </div>
 
       <div className="container relative">
@@ -83,22 +89,29 @@ export default function AboutSection({ data }) {
               }}
               aria-label={title}
             >
-              {letters.map((ch, i) => (
-                <motion.span
-                  key={`${ch}-${i}`}
-                  className="inline-block"
-                  variants={{
-                    hidden: { opacity: 0, y: 10, filter: 'blur(6px)' },
-                    show: {
-                      opacity: 1,
-                      y: 0,
-                      filter: 'blur(0px)',
-                      transition: { duration: 0.22, ease: 'easeOut' },
-                    },
-                  }}
+              {words.map((word, wIdx) => (
+                <span
+                  key={`word-${wIdx}`}
+                  className="inline-block whitespace-nowrap mr-[0.25em]"
                 >
-                  {ch === ' ' ? '\u00A0' : ch}
-                </motion.span>
+                  {word.split('').map((ch, i) => (
+                    <motion.span
+                      key={`${wIdx}-${ch}-${i}`}
+                      className="inline-block"
+                      variants={{
+                        hidden: { opacity: 0, y: 10, filter: 'blur(6px)' },
+                        show: {
+                          opacity: 1,
+                          y: 0,
+                          filter: 'blur(0px)',
+                          transition: { duration: 0.22, ease: 'easeOut' },
+                        },
+                      }}
+                    >
+                      {ch}
+                    </motion.span>
+                  ))}
+                </span>
               ))}
 
               {/* CURSOR */}
