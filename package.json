@@ -10,7 +10,9 @@
     "seed:admin": "node scripts/seed-admin.cjs",
     "seed:news": "node scripts/seed-news.cjs",
     "seed:news:fix-images": "node scripts/update-news-images.cjs",
-    "seed:services": "node scripts/seed-services.cjs"
+    "seed:services": "node scripts/seed-services.cjs",
+    "db:export": "node scripts/export-db.cjs",
+    "db:import": "node scripts/import-db.cjs"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^41.4.2",
